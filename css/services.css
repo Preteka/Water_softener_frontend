@@ -1,0 +1,773 @@
+/* ==========================================================================
+   AquaPure - Services & Products Listing Page Styles
+   Scoped, Modern Water-Themed Visual Design System
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Services Hero Section
+   -------------------------------------------------------------------------- */
+.services-hero-section {
+  position: relative;
+  padding: 5rem 0 4.5rem;
+  background: radial-gradient(circle at 10% 20%, rgba(11, 159, 227, 0.09) 0%, transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(0, 111, 185, 0.08) 0%, transparent 50%),
+              var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-card-border);
+  overflow: hidden;
+}
+
+.services-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.services-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.services-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-blue-light);
+  padding: 0.35rem 0.95rem;
+  border-radius: 50px;
+  border: 1px solid var(--color-card-border);
+  margin-bottom: 1.25rem;
+}
+
+.services-badge-pill svg {
+  color: var(--color-primary);
+}
+
+.services-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+  font-weight: 800;
+  color: var(--color-text-navy);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.services-hero-title span {
+  color: var(--color-primary);
+}
+
+.services-hero-desc {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.services-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.services-hero-trust-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-card-border);
+  width: 100%;
+}
+
+.services-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-navy);
+}
+
+.services-trust-item svg {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+/* Services Hero Visual */
+.services-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-visual-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.services-glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(11, 159, 227, 0.25) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services-hero-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.services-visual-wrap:hover .services-hero-img {
+  transform: scale(1.03);
+}
+
+/* Floating Quality Card */
+.floating-quality-card {
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  z-index: 2;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  backdrop-filter: blur(8px);
+  animation: floatCard 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
+
+.floating-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.floating-card-text strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+}
+
+.floating-card-text span {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   2. Category Filter Bar
+   -------------------------------------------------------------------------- */
+.services-filter-section {
+  padding: 2.25rem 0;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-card-border);
+  position: sticky;
+  top: var(--header-height, 78px);
+  z-index: 20;
+  backdrop-filter: blur(10px);
+}
+
+.services-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.services-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 50px;
+  border: 1px solid var(--color-card-border);
+  background: var(--color-card-bg);
+  color: var(--color-text-navy);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.services-filter-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: var(--color-blue-light);
+  transform: translateY(-2px);
+}
+
+.services-filter-btn.active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(0, 119, 200, 0.3);
+}
+
+.filter-count-badge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 50px;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.services-filter-btn.active .filter-count-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   3. Services Grid Section (Exactly 6 Services)
+   -------------------------------------------------------------------------- */
+.services-grid-section {
+  padding: 5rem 0;
+  background: var(--color-bg);
+}
+
+.services-grid-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.services-grid-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin-bottom: 0.75rem;
+}
+
+.services-grid-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Service Card Component */
+.service-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.service-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-bg-subtle);
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.service-card:hover .service-card-img {
+  transform: scale(1.06);
+}
+
+.service-card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(8, 59, 102, 0.85);
+  color: #FFFFFF;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.service-card-icon-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.service-card-mini-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover .service-card-mini-icon {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+}
+
+.service-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  line-height: 1.3;
+}
+
+.service-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.service-card-benefit-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-text-navy);
+  border-left: 3px solid var(--color-primary);
+}
+
+.service-card-benefit-box svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.service-card-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: gap var(--transition-fast);
+}
+
+.service-card:hover .service-card-link {
+  gap: 0.65rem;
+  color: var(--color-blue-deep);
+}
+
+/* --------------------------------------------------------------------------
+   4. Section D: How to Choose the Right Service
+   -------------------------------------------------------------------------- */
+.choose-service-section {
+  padding: 5.5rem 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-card-border);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.choose-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.choose-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin-bottom: 0.75rem;
+}
+
+.choose-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.choose-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  position: relative;
+}
+
+.choose-steps-grid::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-blue-bright), var(--color-primary));
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.choose-step-card {
+  position: relative;
+  z-index: 1;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 1.75rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.choose-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.step-num-badge {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 14px rgba(0, 119, 200, 0.35);
+  border: 4px solid var(--color-card-bg);
+}
+
+.step-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  margin-bottom: 0.65rem;
+}
+
+.step-card-desc {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   5. Section E: Why Choose AquaPure
+   -------------------------------------------------------------------------- */
+.why-services-section {
+  padding: 5rem 0;
+  background: var(--color-bg);
+}
+
+.why-services-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.why-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.why-service-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.why-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.why-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.why-service-card:hover .why-icon-box {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.why-title {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  margin-bottom: 0.5rem;
+}
+
+.why-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   6. Section F: Customer Testimonials
+   -------------------------------------------------------------------------- */
+.services-testimonials-section {
+  padding: 5.5rem 0;
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-card-border);
+}
+
+.testimonials-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-testimonial-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.service-testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.testimonial-stars-row {
+  display: flex;
+  gap: 0.25rem;
+  color: #F59E0B;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-navy);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonial-author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-card-border);
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-info strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+}
+
+.author-info span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   7. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .services-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .choose-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .choose-steps-grid::before {
+    display: none;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero-section {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .choose-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .floating-quality-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 1rem;
+    animation: none;
+  }
+
+  .services-filter-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+  }
+
+  .services-filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,660 @@
+/* ==========================================================================
+   AquaPure - Service Details Page Styles
+   Scoped, Modern Dynamic Water-Themed Detail Template
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Dynamic Service Hero Section
+   -------------------------------------------------------------------------- */
+.service-hero-section {
+  position: relative;
+  padding: 5rem 0 4.5rem;
+  background: radial-gradient(circle at 15% 20%, rgba(11, 159, 227, 0.09) 0%, transparent 45%),
+              radial-gradient(circle at 85% 80%, rgba(0, 111, 185, 0.08) 0%, transparent 50%),
+              var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-card-border);
+  overflow: hidden;
+}
+
+.service-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.service-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.service-breadcrumb a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.service-breadcrumb a:hover {
+  color: var(--color-blue-deep);
+}
+
+.service-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  color: var(--color-text-navy);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.5px;
+}
+
+.service-hero-desc {
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 620px;
+}
+
+.service-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Service Hero Visual */
+.service-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-visual-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-card-border);
+}
+
+.service-glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle, rgba(11, 159, 227, 0.25) 0%, transparent 70%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.service-hero-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.service-visual-wrap:hover .service-hero-img {
+  transform: scale(1.03);
+}
+
+/* --------------------------------------------------------------------------
+   2. Service Overview & Ideal For Scenarios
+   -------------------------------------------------------------------------- */
+.service-overview-section {
+  padding: 5rem 0;
+  background: var(--color-bg);
+}
+
+.service-overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+.overview-main-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.overview-heading {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin-bottom: 1.25rem;
+  line-height: 1.3;
+}
+
+.overview-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.overview-ideal-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.ideal-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.ideal-card-title svg {
+  color: var(--color-primary);
+}
+
+.ideal-scenarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ideal-scenario-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-navy);
+}
+
+.ideal-check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Key Features & Benefits Grid
+   -------------------------------------------------------------------------- */
+.service-features-section {
+  padding: 5rem 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-card-border);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.section-centered-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3.5rem;
+}
+
+.section-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--color-primary);
+  background: var(--color-blue-light);
+  padding: 0.35rem 0.95rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.section-heading-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin-bottom: 0.75rem;
+}
+
+.section-heading-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.feature-box-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  display: flex;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.feature-box-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.feature-box-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.feature-box-card:hover .feature-box-icon {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+}
+
+.feature-box-content h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  margin-bottom: 0.5rem;
+}
+
+.feature-box-content p {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   4. How It Works - Process Timeline
+   -------------------------------------------------------------------------- */
+.service-process-section {
+  padding: 5rem 0;
+  background: var(--color-bg);
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+}
+
+.process-step-item {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.process-step-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.process-step-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-blue-deep));
+  color: #FFFFFF;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 119, 200, 0.3);
+}
+
+.process-step-title {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  margin-bottom: 0.5rem;
+}
+
+.process-step-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   5. Pricing & Consultation Card
+   -------------------------------------------------------------------------- */
+.service-pricing-section {
+  padding: 5rem 0;
+  background: var(--color-bg-subtle);
+  border-top: 1px solid var(--color-card-border);
+  border-bottom: 1px solid var(--color-card-border);
+}
+
+.pricing-consult-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.pricing-consult-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin-bottom: 1rem;
+}
+
+.pricing-consult-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-included-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pricing-included-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-text-navy);
+}
+
+.pricing-included-item svg {
+  color: #10B981;
+  flex-shrink: 0;
+}
+
+.pricing-consult-action-box {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.action-box-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-card-bg);
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  border: 1px solid var(--color-card-border);
+}
+
+.action-box-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Service FAQs Accordion
+   -------------------------------------------------------------------------- */
+.service-faq-section {
+  padding: 5rem 0;
+  background: var(--color-bg);
+}
+
+.faq-accordion-list {
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-accordion-item {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.faq-accordion-item:hover {
+  border-color: var(--color-primary);
+}
+
+.faq-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.35rem 1.65rem;
+  background: transparent;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-navy);
+  text-align: left;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.faq-accordion-header:hover {
+  color: var(--color-primary);
+}
+
+.faq-accordion-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.faq-accordion-item.open .faq-accordion-icon {
+  transform: rotate(180deg);
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.faq-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, padding 0.35s ease;
+  padding: 0 1.65rem;
+}
+
+.faq-accordion-item.open .faq-accordion-body {
+  padding-bottom: 1.5rem;
+}
+
+.faq-accordion-body p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7. Related Services Section
+   -------------------------------------------------------------------------- */
+.service-related-section {
+  padding: 5rem 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--color-card-border);
+}
+
+.related-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Not Found State
+   -------------------------------------------------------------------------- */
+.service-not-found-card {
+  text-align: center;
+  padding: 5rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.not-found-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-navy);
+  margin-bottom: 1rem;
+}
+
+.not-found-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   9. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .service-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .service-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-consult-card {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.25rem 1.75rem;
+  }
+
+  .related-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero-section {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .process-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-main-card,
+  .overview-ideal-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .feature-box-card {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.75rem 1.25rem;
+  }
+}

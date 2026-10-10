@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AquaPure - Niche-Specific Water Solutions. Find the right water softening or whole-home filtration system designed around your home's unique water conditions.">
+  <meta name="theme-color" content="#006FB9">
+  <title>Smart Water Solutions | AquaPure Home Water Softeners</title>
+
+  <!-- Google Fonts: Sora & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVIGATION (Exact Proportions & Layout to Reference UI)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Brand Logo (Left) -->
+        <a href="index.html" class="brand-logo" aria-label="AquaPure Home">
+          <svg class="logo-icon-svg" viewBox="0 0 36 36" fill="none">
+            <path d="M18 4C18 4 9 14.5 9 21.5C9 26.47 13.03 30.5 18 30.5C22.97 30.5 27 26.47 27 21.5C27 14.5 18 4 18 4Z" fill="url(#logo_grad_h2)"/>
+            <path d="M18 9C18 9 12 16.5 12 21.5C12 24.8 14.69 27.5 18 27.5C21.31 27.5 24 24.8 24 21.5C24 16.5 18 9 18 9Z" fill="#FFFFFF" fill-opacity="0.35"/>
+            <defs>
+              <linearGradient id="logo_grad_h2" x1="9" y1="4" x2="27" y2="30.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0B9FE3"/>
+                <stop offset="1" stop-color="#006FB9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="logo-text-group">
+            <span class="brand-title">Aqua<span>Pure</span></span>
+            <span class="brand-sub">Water Solutions</span>
+          </div>
+        </a>
+
+        <!-- Center Navigation Menu (Home 2 is Active) -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home-2.html" class="nav-link active">Home 2</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="#solutions" class="nav-link">Services</a>
+          <a href="#pricing" class="nav-link">Pricing</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          
+          <!-- Dark / Light Mode Toggle -->
+          <button class="header-action-btn" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- LTR / RTL Direction Toggle -->
+          <button class="header-action-btn" id="dirToggleBtn" aria-label="Toggle text direction" title="Switch LTR/RTL">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
+            <span id="dirLabel">RTL</span>
+          </button>
+
+          <!-- Profile Icon with Dropdown -->
+          <div class="profile-dropdown-wrapper" id="profileDropdownWrapper">
+            <button class="header-action-btn" id="profileMenuBtn" aria-label="User Account" title="My Account" aria-expanded="false" aria-haspopup="true" style="padding: 0 0.6rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+            <div class="profile-dropdown-panel" id="profileDropdownPanel" role="menu">
+              <!-- Populated by main.js profile dropdown logic -->
+            </div>
+          </div>
+
+          <!-- Primary CTA Button -->
+          <a href="#testBookingModal" class="header-cta-pill trigger-water-test">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Free Water Test
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home <span>&rarr;</span></a>
+        <a href="home-2.html" class="mobile-link active">Home 2 <span>&rarr;</span></a>
+        <a href="about.html" class="mobile-link">About Us <span>&rarr;</span></a>
+        <a href="#solutions" class="mobile-link">Services <span>&rarr;</span></a>
+        <a href="#pricing" class="mobile-link">Pricing <span>&rarr;</span></a>
+        <a href="blog.html" class="mobile-link">Blog <span>&rarr;</span></a>
+        <a href="contact.html" class="mobile-link">Contact <span>&rarr;</span></a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+        <button class="header-action-btn" id="mobileThemeToggleBtn" style="width: 100%; justify-content: flex-start; height: 42px;">
+          <svg id="mobileThemeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span id="themeText">Dark Mode</span>
+        </button>
+        <button class="header-action-btn" id="mobileDirToggleBtn" style="width: 100%; justify-content: flex-start; height: 42px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="17 1 21 5 17 9"></polyline>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          </svg>
+          <span id="mobileDirLabel">Switch to RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <a href="#testBookingModal" class="btn btn-blue trigger-water-test" style="width: 100%;">
+      Book a Free Water Test
+    </a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: FIND YOUR WATER SOLUTION (Interactive Testing Visual)
+         ========================================================================== -->
+    <section class="home2-hero-wrapper" id="home2Hero">
+      
+      <!-- Ambient Visual Background Glow -->
+      <div class="home2-hero-bg-fx" aria-hidden="true">
+        <div class="home2-ambient-glow"></div>
+      </div>
+
+      <div class="container">
+        <div class="home2-hero-grid">
+          
+          <!-- Hero Text Content (Left) -->
+          <div class="home2-hero-content">
+            <div class="hero-pure-tag">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="#38BDF8">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              SMART WATER SOLUTIONS
+            </div>
+
+            <h1 class="hero-main-title" style="margin-bottom: 1.25rem;">
+              Find the Right Water<br>
+              <span class="text-blue-highlight">Solution for Your Home.</span>
+            </h1>
+
+            <p class="hero-supporting-desc" style="margin-bottom: 2rem;">
+              Test your water, understand the problem, and choose a water softening or filtration system designed around your home's needs.
+            </p>
+
+            <div class="hero-btn-group" style="margin-bottom: 2.5rem;">
+              <button class="btn btn-blue trigger-water-test">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                Start With a Free Water Test
+              </button>
+              <a href="#solutions" class="btn btn-white-outline">
+                Explore Solutions
+              </a>
+            </div>
+
+            <!-- Trust Highlights -->
+            <div class="hero-trust-bar">
+              <span class="hero-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Accurate In-Home Analysis
+              </span>
+              <span class="hero-trust-sep">•</span>
+              <span class="hero-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Custom Fit Recommendations
+              </span>
+            </div>
+          </div>
+
+          <!-- Unique Visual: Interactive Water-Quality Panel Inside Water Droplet (Right) -->
+          <div class="home2-hero-visual">
+            
+            <!-- Floating Droplet Backdrop with Internal Animated Water Waves & Bubbles -->
+            <div class="hero-droplet-backdrop" aria-hidden="true">
+              <div class="droplet-liquid-wave"></div>
+              <div class="rising-bubble b1"></div>
+              <div class="rising-bubble b2"></div>
+              <div class="rising-bubble b3"></div>
+              <div class="rising-bubble b4"></div>
+              <div class="rising-bubble b5"></div>
+            </div>
+
+            <!-- Glass-like Floating Testing Panel -->
+            <div class="hero-testing-panel">
+              
+              <div class="panel-header-badge">
+                <div class="panel-title-text">
+                  <span class="live-pulse-indicator"></span>
+                  WATER QUALITY CHECK
+                </div>
+                <span style="font-size: 0.72rem; color: #7DD3FC; font-weight: 700;">LIVE SAMPLE</span>
+              </div>
+
+              <!-- Metrics Quality Bars -->
+              <div class="quality-bars-list">
+                
+                <div class="quality-bar-item">
+                  <div class="quality-bar-meta">
+                    <span>Hardness Level</span>
+                    <span>18.5 GPG (Very Hard)</span>
+                  </div>
+                  <div class="quality-track">
+                    <div class="quality-fill fill-warn" data-percent="88" style="width: 88%;"></div>
+                  </div>
+                </div>
+
+                <div class="quality-bar-item">
+                  <div class="quality-bar-meta">
+                    <span>pH Balance</span>
+                    <span>7.2 (Neutral)</span>
+                  </div>
+                  <div class="quality-track">
+                    <div class="quality-fill" data-percent="70" style="width: 70%;"></div>
+                  </div>
+                </div>
+
+                <div class="quality-bar-item">
+                  <div class="quality-bar-meta">
+                    <span>TDS (Total Dissolved Solids)</span>
+                    <span>420 PPM (Elevated)</span>
+                  </div>
+                  <div class="quality-track">
+                    <div class="quality-fill" data-percent="62" style="width: 62%;"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Water Condition Status Alert -->
+              <div class="condition-status-box">
+                <span class="condition-label">Water Condition:</span>
+                <span class="condition-badge">Needs Treatment</span>
+              </div>
+
+              <!-- System Recommendation Result -->
+              <div class="recommendation-panel-box">
+                <div class="rec-title-small">Recommended System:</div>
+                <div class="rec-system-name">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                  Whole-House Water Softener
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         QUICK TRUST STRIP (Slim Water Flow Strip)
+         ========================================================================== -->
+    <section class="quick-trust-strip" aria-label="Key Commitments">
+      <div class="trust-strip-wave-flow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="trust-strip-grid">
+          
+          <div class="trust-strip-item">
+            <div class="trust-strip-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <span>Free Water Testing</span>
+          </div>
+
+          <div class="trust-strip-item">
+            <div class="trust-strip-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <span>Professional Installation</span>
+          </div>
+
+          <div class="trust-strip-item">
+            <div class="trust-strip-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+            </div>
+            <span>Quality Equipment</span>
+          </div>
+
+          <div class="trust-strip-item">
+            <div class="trust-strip-icon-wrap">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>Local Support</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         PROBLEM -> SOLUTION TRANSFORMATION
+         ========================================================================== -->
+    <section class="section problem-solution-section" id="problem-solution">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Water Transformation
+          </div>
+          <h2 class="section-title">Your Water Problem Has a Solution.</h2>
+          <p class="section-desc">
+            Hard water and water-quality issues can affect your home every day. The right treatment starts by understanding what's actually in your water.
+          </p>
+        </div>
+
+        <div class="problem-solution-flow">
+          
+          <!-- LEFT: Common Water Problems -->
+          <div class="ps-box ps-box-problem">
+            <div class="ps-box-header">
+              <div class="ps-box-icon ps-icon-red">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; font-weight: 700; color: #EF4444; text-transform: uppercase;">Untreated Conditions</span>
+                <h3 class="ps-box-title">Common Water Problems</h3>
+              </div>
+            </div>
+
+            <div class="ps-items-list">
+              <div class="ps-item-card">
+                <span class="ps-bullet-bad">✕</span>
+                <span>Scale buildup on faucets</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-bad">✕</span>
+                <span>White mineral deposits</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-bad">✕</span>
+                <span>Dry skin and dull hair</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-bad">✕</span>
+                <span>Appliance efficiency loss</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-bad">✕</span>
+                <span>Plumbing pipe concerns</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-bad">✕</span>
+                <span>Chlorine taste &amp; odor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CENTER: Flow Bridge with Moving Particles -->
+          <div class="ps-flow-bridge" aria-hidden="true">
+            <div class="ps-stream-pipe">
+              <div class="ps-stream-pulse"></div>
+            </div>
+            <div class="ps-arrow-circle" title="Transforming Water">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </div>
+            <div class="ps-stream-pipe">
+              <div class="ps-stream-pulse" style="animation-delay: 1s;"></div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Our Solutions -->
+          <div class="ps-box ps-box-solution">
+            <div class="ps-box-header">
+              <div class="ps-box-icon ps-icon-blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase;">AquaPure Engineered</span>
+                <h3 class="ps-box-title">Our Solutions</h3>
+              </div>
+            </div>
+
+            <div class="ps-items-list">
+              <div class="ps-item-card">
+                <span class="ps-bullet-good">✓</span>
+                <span>Water Softening</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-good">✓</span>
+                <span>Whole-House Filtration</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-good">✓</span>
+                <span>Drinking Water Filtration</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-good">✓</span>
+                <span>In-Home Water Testing</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-good">✓</span>
+                <span>Professional Installation</span>
+              </div>
+              <div class="ps-item-card">
+                <span class="ps-bullet-good">✓</span>
+                <span>Maintenance &amp; Support</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         FEATURE HIGHLIGHTS (6 Cards with Water Ripple Hover)
+         ========================================================================== -->
+    <section class="section section-alt" id="features">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Comprehensive Care
+          </div>
+          <h2 class="section-title">Everything Your Home Water Needs</h2>
+          <p class="section-desc">
+            Complete, end-to-end water solutions designed to protect your home's plumbing, appliances, and daily well-being.
+          </p>
+        </div>
+
+        <div class="feature-highlights-grid">
+          
+          <!-- Feature 01 -->
+          <div class="feature-water-card">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <span class="feature-num-badge">01</span>
+            </div>
+            <div>
+              <h3 class="feature-card-title">Free Water Testing</h3>
+              <p class="feature-card-desc">
+                Understand your water before choosing a treatment system. We measure hardness, minerals, and purity on site.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 02 -->
+          <div class="feature-water-card">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span class="feature-num-badge">02</span>
+            </div>
+            <div>
+              <h3 class="feature-card-title">Smart Recommendations</h3>
+              <p class="feature-card-desc">
+                Get practical recommendations based on your actual water conditions without pressure to buy oversized equipment.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 03 -->
+          <div class="feature-water-card">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="feature-num-badge">03</span>
+            </div>
+            <div>
+              <h3 class="feature-card-title">Water Softening</h3>
+              <p class="feature-card-desc">
+                Help reduce hardness, scale, and mineral buildup throughout your home, protecting pipes and heating systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 04 -->
+          <div class="feature-water-card">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8 12h8"></path>
+                  <path d="M12 8v8"></path>
+                </svg>
+              </div>
+              <span class="feature-num-badge">04</span>
+            </div>
+            <div>
+              <h3 class="feature-card-title">Whole-House Filtration</h3>
+              <p class="feature-card-desc">
+                Improve water quality at every tap with advanced sediment, chlorine, and chemical filtration systems.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 05 -->
+          <div class="feature-water-card">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <span class="feature-num-badge">05</span>
+            </div>
+            <div>
+              <h3 class="feature-card-title">Professional Installation</h3>
+              <p class="feature-card-desc">
+                Reliable installation performed with care and precision by certified technicians, respecting your home.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 06 -->
+          <div class="feature-water-card">
+            <div class="feature-card-top">
+              <div class="feature-icon-box">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <span class="feature-num-badge">06</span>
+            </div>
+            <div>
+              <h3 class="feature-card-title">Ongoing Support</h3>
+              <p class="feature-card-desc">
+                Dependable maintenance, filter replacements, and expert support to keep your system performing for years.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         HOW IT WORKS (Horizontal Water-Flow Process)
+         ========================================================================== -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Simple 4-Step Process
+          </div>
+          <h2 class="section-title">From Water Test to Better Water</h2>
+          <p class="section-desc">
+            A transparent and structured pathway from testing your water to enjoying clean, conditioned water throughout your home.
+          </p>
+        </div>
+
+        <div class="process-flow-container">
+          
+          <!-- Continuous Horizontal Connecting Track -->
+          <div class="process-steps-track" aria-hidden="true">
+            <div class="process-flow-stream"></div>
+          </div>
+
+          <div class="process-steps-grid">
+            
+            <!-- Step 01 -->
+            <div class="process-step-node">
+              <div class="process-circle-badge">
+                <span class="process-step-index">1</span>
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <h3 class="process-node-title">BOOK YOUR TEST</h3>
+              <p class="process-node-desc">Schedule a free in-home water test at a time convenient for you.</p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="process-step-node">
+              <div class="process-circle-badge">
+                <span class="process-step-index">2</span>
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  <circle cx="12" cy="14" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="process-node-title">UNDERSTAND YOUR WATER</h3>
+              <p class="process-node-desc">Identify the actual water conditions and mineral levels on site.</p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="process-step-node">
+              <div class="process-circle-badge">
+                <span class="process-step-index">3</span>
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <h3 class="process-node-title">CHOOSE YOUR SOLUTION</h3>
+              <p class="process-node-desc">Select the system that fits your home size, flow, and water profile.</p>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="process-step-node">
+              <div class="process-circle-badge">
+                <span class="process-step-index">4</span>
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="process-node-title">PROFESSIONAL INSTALLATION</h3>
+              <p class="process-node-desc">Get your system installed properly with clean piping and full warranty.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         WATER SOLUTION SHOWCASE (Staggered Layout)
+         ========================================================================== -->
+    <section class="section section-alt" id="solutions">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            System Showcase
+          </div>
+          <h2 class="section-title">Explore Water Solutions</h2>
+          <p class="section-desc">
+            Engineered systems designed to address specific water hardness, taste, and whole-house purity requirements.
+          </p>
+        </div>
+
+        <div class="showcase-staggered-grid">
+          
+          <!-- Large Featured Card: Water Softener -->
+          <div class="showcase-primary-card">
+            <div>
+              <div class="showcase-img-wrap">
+                <img src="assets/images/system_water_softener.jpg" alt="Whole House Water Softener System" loading="lazy">
+                <span class="showcase-badge-pill">Most Popular</span>
+              </div>
+              <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--color-text-navy); margin-bottom: 0.75rem;">
+                Whole-House Water Softeners
+              </h3>
+              <p style="font-size: 0.98rem; color: var(--color-text-muted); line-height: 1.65; margin-bottom: 1.5rem;">
+                Eliminates hard water minerals, protects plumbing against limescale buildup, keeps appliances running efficiently, and leaves skin and hair soft.
+              </p>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; padding-top: 1.25rem; border-top: 1px solid var(--color-card-border); flex-wrap: wrap; gap: 1rem;">
+              <button class="btn btn-blue trigger-water-test">
+                Request Free Sizing
+              </button>
+              <span style="font-size: 0.875rem; font-weight: 700; color: var(--color-primary);">High-Efficiency Salt Saver</span>
+            </div>
+          </div>
+
+          <!-- Stacked Secondary Cards -->
+          <div class="showcase-stacked-list">
+            
+            <!-- Mini Card 1: Whole-House Filtration -->
+            <div class="showcase-mini-card">
+              <div class="mini-card-thumb">
+                <img src="assets/images/system_filtration.jpg" alt="Whole-House Water Filtration" loading="lazy">
+              </div>
+              <div>
+                <h4 class="mini-card-title">Whole-House Filtration</h4>
+                <p class="mini-card-desc">Reduces chlorine, heavy metals, sediment, and chemical contaminants at every faucet.</p>
+                <a href="#testBookingModal" class="learn-more-link trigger-water-test">Learn More &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Mini Card 2: Drinking Water Systems (RO) -->
+            <div class="showcase-mini-card">
+              <div class="mini-card-thumb">
+                <img src="assets/images/system_undersink_ro.jpg" alt="Reverse Osmosis Drinking Water System" loading="lazy">
+              </div>
+              <div>
+                <h4 class="mini-card-title">Drinking Water Systems</h4>
+                <p class="mini-card-desc">Multi-stage reverse osmosis filtration for crisp, bottle-quality drinking water on tap.</p>
+                <a href="#testBookingModal" class="learn-more-link trigger-water-test">Learn More &rarr;</a>
+              </div>
+            </div>
+
+            <!-- Mini Card 3: Water Testing -->
+            <div class="showcase-mini-card">
+              <div class="mini-card-thumb">
+                <img src="assets/images/water_testing_card.jpg" alt="Comprehensive Water Testing" loading="lazy">
+              </div>
+              <div>
+                <h4 class="mini-card-title">Precision Water Testing</h4>
+                <p class="mini-card-desc">Diagnostic test strips and digital TDS evaluation to determine your home's exact chemistry.</p>
+                <a href="#testBookingModal" class="learn-more-link trigger-water-test">Schedule Test &rarr;</a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         USE CASES (Solutions Designed for Real Homes)
+         ========================================================================== -->
+    <section class="section" id="use-cases">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Tailored Applications
+          </div>
+          <h2 class="section-title">Solutions Designed for Real Homes</h2>
+          <p class="section-desc">
+            Whether you live in a compact apartment, a busy suburban home, or a large estate, our systems scale to your household requirements.
+          </p>
+        </div>
+
+        <div class="use-cases-grid">
+          
+          <!-- Use Case 1: Family Homes -->
+          <div class="use-case-card">
+            <div class="use-case-top-row">
+              <div class="use-case-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                </svg>
+              </div>
+              <span class="use-case-badge-label">High Demand</span>
+            </div>
+            <h3 class="use-case-title">Family Homes</h3>
+            <p class="use-case-desc">Everyday water protection designed around the high laundry, shower, and dishwashing needs of your household.</p>
+          </div>
+
+          <!-- Use Case 2: Apartments & Condos -->
+          <div class="use-case-card">
+            <div class="use-case-top-row">
+              <div class="use-case-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                  <line x1="9" y1="22" x2="9" y2="2"></line>
+                </svg>
+              </div>
+              <span class="use-case-badge-label">Compact Footprint</span>
+            </div>
+            <h3 class="use-case-title">Apartments &amp; Condos</h3>
+            <p class="use-case-desc">Space-saving filtration units engineered for tight closets and under-sink installations without sacrificing flow.</p>
+          </div>
+
+          <!-- Use Case 3: Large Homes -->
+          <div class="use-case-card">
+            <div class="use-case-top-row">
+              <div class="use-case-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span class="use-case-badge-label">High Flow GPM</span>
+            </div>
+            <h3 class="use-case-title">Large Homes &amp; Estates</h3>
+            <p class="use-case-desc">High-capacity softening valves and twin-tank configurations that ensure uninterrupted soft water across multiple bathrooms.</p>
+          </div>
+
+          <!-- Use Case 4: Rental Properties -->
+          <div class="use-case-card">
+            <div class="use-case-top-row">
+              <div class="use-case-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <span class="use-case-badge-label">Low Maintenance</span>
+            </div>
+            <h3 class="use-case-title">Rental Properties</h3>
+            <p class="use-case-desc">Durable, low-maintenance water solutions that protect investment properties from premature fixture and boiler damage.</p>
+          </div>
+
+          <!-- Use Case 5: New Construction -->
+          <div class="use-case-card">
+            <div class="use-case-top-row">
+              <div class="use-case-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="use-case-badge-label">Day-One Protection</span>
+            </div>
+            <h3 class="use-case-title">New Build Homes</h3>
+            <p class="use-case-desc">Protect brand new plumbing, tankless water heaters, and designer fixtures right from day one of moving in.</p>
+          </div>
+
+          <!-- Use Case 6: Hard-Water Hotspots -->
+          <div class="use-case-card">
+            <div class="use-case-top-row">
+              <div class="use-case-icon-ring">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+              </div>
+              <span class="use-case-badge-label">Extreme Hardness</span>
+            </div>
+            <h3 class="use-case-title">Hard-Water Homes</h3>
+            <p class="use-case-desc">Heavy-duty ion-exchange resin systems calibrated specifically for severe mineral content exceeding 20+ GPG.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         WATER TEST FEATURE SECTION (Start With What Your Water Is Telling You)
+         ========================================================================== -->
+    <section class="section water-test-showcase-section" id="water-test-details">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Diagnostic Approach
+          </div>
+          <h2 class="section-title">Start With What Your Water Is Telling You.</h2>
+          <p class="section-desc">
+            We believe testing comes before equipment. Learn how our certified test reveals the exact parameters needed to tailor your system.
+          </p>
+        </div>
+
+        <div class="water-test-feature-grid">
+          
+          <!-- Sample Flask Container Visual -->
+          <div class="test-sample-container-card">
+            <div class="sample-flask-visual">
+              <svg class="sample-flask-svg" viewBox="0 0 160 210" fill="none">
+                <!-- Beaker Glass Outer -->
+                <path d="M60 20 L100 20 L100 60 L145 170 C155 195 135 205 110 205 L50 205 C25 205 5 195 15 170 L60 60 Z" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.6)" stroke-width="3"/>
+                <!-- Water Fill inside Beaker -->
+                <path d="M28 150 C50 145 110 155 132 150 L142 175 C150 195 132 202 110 202 L50 202 C28 202 10 195 18 175 Z" fill="url(#sample_grad)"/>
+                <!-- Graduated Marks -->
+                <line x1="68" y1="90" x2="88" y2="90" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2"/>
+                <line x1="64" y1="120" x2="92" y2="120" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2"/>
+                <line x1="58" y1="150" x2="98" y2="150" stroke="rgba(255, 255, 255, 0.4)" stroke-width="2"/>
+                <defs>
+                  <linearGradient id="sample_grad" x1="20" y1="140" x2="140" y2="202" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#38BDF8"/>
+                    <stop offset="1" stop-color="#006FB9"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h3 class="test-sample-title">In-Home Water Sample</h3>
+            <p class="test-sample-desc">
+              100% free analysis performed right at your kitchen tap with immediate, accurate results.
+            </p>
+          </div>
+
+          <!-- Diagnostic Metrics List -->
+          <div class="test-metrics-deck">
+            
+            <!-- Metric: Hardness -->
+            <div class="test-metric-row">
+              <div class="metric-header-line">
+                <span class="metric-name">Mineral Hardness (Calcium &amp; Magnesium)</span>
+                <span class="metric-reading">18.5 GPG &bull; Severe</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill warn" data-percent="88" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <!-- Metric: pH -->
+            <div class="test-metric-row">
+              <div class="metric-header-line">
+                <span class="metric-name">pH Balance Level</span>
+                <span class="metric-reading">7.2 &bull; Balanced</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill" data-percent="72" style="width: 72%;"></div>
+              </div>
+            </div>
+
+            <!-- Metric: TDS -->
+            <div class="test-metric-row">
+              <div class="metric-header-line">
+                <span class="metric-name">TDS (Total Dissolved Solids)</span>
+                <span class="metric-reading">380 PPM &bull; Elevated</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill" data-percent="64" style="width: 64%;"></div>
+              </div>
+            </div>
+
+            <!-- Metric: Chlorine -->
+            <div class="test-metric-row">
+              <div class="metric-header-line">
+                <span class="metric-name">Chlorine &amp; Chemical Odor Level</span>
+                <span class="metric-reading">2.2 PPM &bull; Noticeable</span>
+              </div>
+              <div class="metric-bar-track">
+                <div class="metric-bar-fill warn" data-percent="55" style="width: 55%;"></div>
+              </div>
+            </div>
+
+            <!-- Recommendation Verdict Box -->
+            <div class="metric-verdict-box">
+              <div class="verdict-text-left">
+                Your Results &rarr; Your Custom Recommendation
+              </div>
+              <button class="verdict-action-link trigger-water-test">
+                Book Test Now &rarr;
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         PRICING TEASER (3 Solution Tiers)
+         ========================================================================== -->
+    <section class="section" id="pricing">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Transparent Plans
+          </div>
+          <h2 class="section-title">Choose the Right Level of Water Protection</h2>
+          <p class="section-desc">
+            Clear, honest solution packages tailored to your water condition and budget.
+          </p>
+        </div>
+
+        <div class="pricing-tiers-grid">
+          
+          <!-- Tier 1: ESSENTIAL -->
+          <div class="pricing-card">
+            <div>
+              <h3 class="pricing-tier-name">ESSENTIAL</h3>
+              <p class="pricing-tier-tagline">For basic water improvement and scale reduction in smaller households.</p>
+              <div class="pricing-quote-banner">Custom Sized for Your Home</div>
+
+              <ul class="pricing-features-list">
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>High-efficiency single tank softener</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Digital metered control valve</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Standard professional installation</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>1-Year parts &amp; labor warranty</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-secondary trigger-water-test" style="width: 100%;">
+              Get a Quote
+            </button>
+          </div>
+
+          <!-- Tier 2: SMART (Recommended / Featured) -->
+          <div class="pricing-card featured-tier">
+            <span class="featured-ribbon">Recommended</span>
+            <div>
+              <h3 class="pricing-tier-name">SMART</h3>
+              <p class="pricing-tier-tagline">For comprehensive whole-home water softening and sediment protection.</p>
+              <div class="pricing-quote-banner">Most Homeowners' Choice</div>
+
+              <ul class="pricing-features-list">
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Premium high-capacity water softener</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Integrated whole-house sediment pre-filter</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Smart low-salt indicator &amp; bypass valve</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Professional installation with shut-off valve</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>5-Year comprehensive system warranty</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-blue trigger-water-test" style="width: 100%;">
+              Get a Quote
+            </button>
+          </div>
+
+          <!-- Tier 3: PREMIUM -->
+          <div class="pricing-card">
+            <div>
+              <h3 class="pricing-tier-name">PREMIUM</h3>
+              <p class="pricing-tier-tagline">For advanced multi-stage filtration, softening, and drinking water purification.</p>
+              <div class="pricing-quote-banner">Complete Water Luxury</div>
+
+              <ul class="pricing-features-list">
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Heavy-duty dual-tank continuous softener</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Whole-house carbon &amp; VOC filtration</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Under-sink 5-stage Reverse Osmosis tap</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Priority installation &amp; annual maintenance</span>
+                </li>
+                <li class="pricing-feature-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>10-Year premier protection warranty</span>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-secondary trigger-water-test" style="width: 100%;">
+              Get a Custom Quote
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         TESTIMONIALS (What Homeowners Say)
+         ========================================================================== -->
+    <section class="section section-alt" id="testimonials">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Verified Reviews
+          </div>
+          <h2 class="section-title">What Homeowners Say</h2>
+          <p class="section-desc">
+            Real experiences from families who transformed their water with AquaPure solutions.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="testimonial-quote">
+                "After the water test, they explained exactly what our home needed. The installation was smooth, timely, and very professional."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">PR</div>
+              <div>
+                <div class="author-name">Priya R.</div>
+                <div class="author-role">Homeowner &bull; Suburban Metro</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="testimonial-quote">
+                "Clear recommendations without pushing unnecessary equipment. We finally understood our hard-water problem and got the perfect fit."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">AK</div>
+              <div>
+                <div class="author-name">Arun K.</div>
+                <div class="author-role">Homeowner &bull; North Valley</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="rating-stars">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              </div>
+              <p class="testimonial-quote">
+                "Professional service from testing to installation. No more mineral buildup on our shower glass or dishes. Very happy with the results."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar">MS</div>
+              <div>
+                <div class="author-name">Meena S.</div>
+                <div class="author-role">Homeowner &bull; Green Hills</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Trust Certifications -->
+        <div class="trust-bar-wrap">
+          <div class="trust-bar-title">Trusted by homeowners across the local community</div>
+          <div class="trust-logos-row">
+            <div class="trust-logo-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+              <span>WQA Certified</span>
+            </div>
+            <div class="trust-logo-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5.25-3.5 10-8 12-4.5-2-8-6.75-8-12V6l8-4z"/></svg>
+              <span>NSF Standard 44/58</span>
+            </div>
+            <div class="trust-logo-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              <span>EPA Quality Compliant</span>
+            </div>
+            <div class="trust-logo-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/></svg>
+              <span>ISO 9001 Approved</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==========================================================================
+         MAIN CTA (Exact Master Home 1 Component & Animated Waves)
+         ========================================================================== -->
+    <section class="main-cta-section" id="mainCTA">
+      
+      <!-- Animated Top Water-Wave Boundary -->
+      <div class="cta-wave-top-wrap" aria-hidden="true">
+        <svg class="cta-wave-svg cta-wave-top-svg" viewBox="0 0 2880 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cta-wave-fill-top" d="M 0,35 C 80,48 110,58 160,58 C 230,58 280,22 340,22 C 410,22 460,68 520,68 C 590,68 640,38 700,38 C 770,38 820,72 880,72 C 950,72 1000,28 1060,28 C 1130,28 1180,54 1240,54 C 1310,54 1370,26 1440,35 C 1520,48 1550,58 1600,58 C 1670,58 1720,22 1780,22 C 1850,22 1900,68 1960,68 C 2030,68 2080,38 2140,38 C 2210,38 2260,72 2320,72 C 2390,72 2440,28 2500,28 C 2570,28 2620,54 2680,54 C 2750,54 2810,26 2880,35 L 2880,0 L 0,0 Z"/>
+          <path class="cta-wave-highlight" d="M 0,35 C 80,48 110,58 160,58 C 230,58 280,22 340,22 C 410,22 460,68 520,68 C 590,68 640,38 700,38 C 770,38 820,72 880,72 C 950,72 1000,28 1060,28 C 1130,28 1180,54 1240,54 C 1310,54 1370,26 1440,35 C 1520,48 1550,58 1600,58 C 1670,58 1720,22 1780,22 C 1850,22 1900,68 1960,68 C 2030,68 2080,38 2140,38 C 2210,38 2260,72 2320,72 C 2390,72 2440,28 2500,28 C 2570,28 2620,54 2680,54 C 2750,54 2810,26 2880,35"/>
+        </svg>
+      </div>
+
+      <!-- Animated Bottom Water-Wave Boundary -->
+      <div class="cta-wave-bottom-wrap" aria-hidden="true">
+        <svg class="cta-wave-svg cta-wave-bottom-svg" viewBox="0 0 2880 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cta-wave-fill-bottom" d="M 0,48 C 70,36 120,24 180,24 C 250,24 300,68 360,68 C 430,68 480,32 540,32 C 610,32 660,62 720,62 C 790,62 840,40 900,40 C 970,40 1020,74 1080,74 C 1150,74 1200,28 1260,28 C 1330,28 1380,58 1440,48 C 1510,36 1560,24 1620,24 C 1690,24 1740,68 1800,68 C 1870,68 1920,32 1980,32 C 2050,32 2100,62 2160,62 C 2230,62 2280,40 2340,40 C 2410,40 2460,74 2520,74 C 2590,74 2640,28 2700,28 C 2770,28 2820,58 2880,48 L 2880,90 L 0,90 Z"/>
+          <path class="cta-wave-highlight" d="M 0,48 C 70,36 120,24 180,24 C 250,24 300,68 360,68 C 430,68 480,32 540,32 C 610,32 660,62 720,62 C 790,62 840,40 900,40 C 970,40 1020,74 1080,74 C 1150,74 1200,28 1260,28 C 1330,28 1380,58 1440,48 C 1510,36 1560,24 1620,24 C 1690,24 1740,68 1800,68 C 1870,68 1920,32 1980,32 C 2050,32 2100,62 2160,62 C 2230,62 2280,40 2340,40 C 2410,40 2460,74 2520,74 C 2590,74 2640,28 2700,28 C 2770,28 2820,58 2880,48"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title">Not Sure Which Water Solution You Need?</h2>
+          <p class="cta-desc">
+            Start with a free water test and discover the right solution for your home's water.
+          </p>
+
+          <div class="cta-buttons-wrap">
+            <button class="btn btn-white trigger-water-test">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              Book a Free Water Test
+            </button>
+            <a href="#siteFooter" class="btn btn-white-outline">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ==========================================================================
+       FOOTER (Exact Master Home 1 Component)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-col-brand">
+          <div class="footer-brand-title">Aqua<span>Pure</span></div>
+          <p>
+            Certified water softening and filtration specialists dedicated to protecting family health, home plumbing, and everyday water purity.
+          </p>
+          <div class="footer-social-links">
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="home-2.html" class="footer-link-item">Home 2</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="#solutions" class="footer-link-item">Services</a></li>
+            <li><a href="#pricing" class="footer-link-item">Pricing</a></li>
+            <li><a href="#water-test-details" class="footer-link-item">Blog</a></li>
+            <li><a href="#mainCTA" class="footer-link-item">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+1 (800) 555-AQUA<br>Mon-Sat: 8am - 7pm</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>support@aquapurewater.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>450 Aqua Vista Blvd, Suite 200</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Service Areas</div>
+          <ul class="footer-links-list">
+            <li><span class="footer-link-item">Metro Suburbs &amp; North Valley</span></li>
+            <li><span class="footer-link-item">Green Hills &amp; Oakridge</span></li>
+            <li><span class="footer-link-item">Coastal County &amp; Bayshore</span></li>
+            <li><span class="footer-link-item">Westside Foothills</span></li>
+            <li><span class="footer-link-item">Eastern Lake District</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 AquaPure Solutions Inc. All rights reserved. Professional Water Treatment.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#siteFooter">Privacy Policy</a>
+          <a href="#siteFooter">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================================
+       BOOKING MODAL (Exact Master Home 1 Component)
+       ========================================================================== -->
+  <div class="modal-overlay" id="testBookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      
+      <div class="modal-header">
+        <h3 id="modalTitle">Book Your Free Water Test</h3>
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+        <form id="bookingForm">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. John Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phoneNum">Phone Number</label>
+              <input type="tel" id="phoneNum" class="form-control" placeholder="(555) 000-0000" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="emailAddr">Email Address</label>
+            <input type="email" id="emailAddr" class="form-control" placeholder="john@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="waterIssue">Primary Water Concern</label>
+            <select id="waterIssue" class="form-control">
+              <option value="hard-water">Hard water / Scale buildup on faucets</option>
+              <option value="taste-odor">Bad taste, chlorine or sulfur odor</option>
+              <option value="skin-hair">Dry skin and dull hair after showers</option>
+              <option value="whole-home">Comprehensive whole-home testing</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-blue" style="width: 100%; margin-top: 0.5rem;">
+            Schedule In-Home Water Test
+          </button>
+        </form>
+
+        <div class="booking-success-message" id="bookingSuccess">
+          <div class="success-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 class="success-title">Testing Request Received!</h4>
+          <p class="success-desc">
+            A certified AquaPure water specialist will contact you within 2 business hours to confirm your free in-home appointment.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main JavaScript -->
+  <script src="js/auth.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

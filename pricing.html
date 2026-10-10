@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Transparent pricing guidance, indicative price ranges, and online service booking with advance payment from AquaPure Water Solutions.">
+  <meta name="theme-color" content="#0077C8">
+  <title>Pricing &amp; Online Service Booking | AquaPure Water Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/service-details.css">
+  <link rel="stylesheet" href="css/pricing.css">
+</head>
+
+<body>
+  <!-- SITE HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="AquaPure Home">
+          <svg class="logo-icon-svg" viewBox="0 0 36 36" fill="none">
+            <path d="M18 4C18 4 9 14.5 9 21.5C9 26.47 13.03 30.5 18 30.5C22.97 30.5 27 26.47 27 21.5C27 14.5 18 4 18 4Z"
+              fill="url(#lg_pricing_head)" />
+            <path
+              d="M18 9C18 9 12 16.5 12 21.5C12 24.8 14.69 27.5 18 27.5C21.31 27.5 24 24.8 24 21.5C24 16.5 18 9 18 9Z"
+              fill="#FFFFFF" fill-opacity="0.35" />
+            <defs>
+              <linearGradient id="lg_pricing_head" x1="9" y1="4" x2="27" y2="30.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0B9FE3" />
+                <stop offset="1" stop-color="#006FB9" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="logo-text-group">
+            <span class="brand-title">Aqua<span>Pure</span></span>
+            <span class="brand-sub">Water Solutions</span>
+          </div>
+        </a>
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home-2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="pricing.html" class="nav-link active">Pricing</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <button class="header-action-btn" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button class="header-action-btn" id="dirToggleBtn" aria-label="Toggle text direction" title="Switch LTR/RTL">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
+            <span id="dirLabel">RTL</span>
+          </button>
+          <!-- Profile Icon with Dropdown -->
+          <div class="profile-dropdown-wrapper" id="profileDropdownWrapper">
+            <button class="header-action-btn" id="profileMenuBtn" aria-label="User Account" title="My Account" aria-expanded="false" aria-haspopup="true" style="padding: 0 0.6rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+            <div class="profile-dropdown-panel" id="profileDropdownPanel" role="menu">
+              <!-- Populated by main.js profile dropdown logic -->
+            </div>
+          </div>
+          <a href="#testBookingModal" class="header-cta-pill trigger-water-test">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Free Water Test
+          </a>
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home <span>&rarr;</span></a>
+        <a href="home-2.html" class="mobile-link">Home 2 <span>&rarr;</span></a>
+        <a href="about.html" class="mobile-link">About Us <span>&rarr;</span></a>
+        <a href="services.html" class="mobile-link">Services <span>&rarr;</span></a>
+        <a href="pricing.html" class="mobile-link active">Pricing <span>&rarr;</span></a>
+        <a href="blog.html" class="mobile-link">Blog <span>&rarr;</span></a>
+        <a href="contact.html" class="mobile-link">Contact <span>&rarr;</span></a>
+      </div>
+    </div>
+    <div class="mobile-drawer-footer">
+      <button class="mobile-drawer-toggle" id="mobileThemeToggleBtn">
+        <span id="mobileThemeIcon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </span>
+        <span id="themeText">Dark Mode</span>
+      </button>
+      <button class="mobile-drawer-toggle" id="mobileDirToggleBtn">
+        <span id="mobileDirLabel">Switch to RTL</span>
+      </button>
+    </div>
+  </div>
+
+  <main>
+    <!-- SECTION A: PRICING HERO -->
+    <section class="pricing-hero-section">
+      <div class="container">
+        <div class="pricing-hero-grid">
+          <div class="pricing-hero-content">
+            <div class="pricing-badge-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              CLEAR &amp; PRACTICAL PRICING
+            </div>
+            <h1 class="pricing-hero-title">
+              The Right Water Solution Starts with <span>Understanding Your Needs</span>
+            </h1>
+            <p class="pricing-hero-desc">
+              Explore our indicative price ranges, schedule an appointment, review your confirmed quote, and pay the 10% advance securely online with zero surprises.
+            </p>
+            <div class="pricing-hero-actions">
+              <a href="#serviceBookingWizard" class="btn btn-blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                Book Service Online
+              </a>
+              <a href="#pricingPlans" class="btn btn-outline-blue">
+                View Price Ranges
+              </a>
+            </div>
+            <div class="pricing-hero-trust-bar">
+              <div class="pricing-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Free In-Home Water Audit</span>
+              </div>
+              <div class="pricing-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>10% Advance on Confirmed Quote</span>
+              </div>
+              <div class="pricing-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Zero Hidden Fees</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-hero-visual">
+            <div class="pricing-preview-card">
+              <div class="preview-card-header">
+                <div class="preview-badge-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="preview-header-text">
+                  <h3>Quote &amp; Booking Model</h3>
+                  <span>Transparent 10% Advance Structure</span>
+                </div>
+              </div>
+              <div class="preview-factors-list">
+                <div class="preview-factor-row">
+                  <span>Water Hardness Sizing</span>
+                  <span>Free Diagnostic</span>
+                </div>
+                <div class="preview-factor-row">
+                  <span>Indicative Plan Range</span>
+                  <span>₹8,000 – ₹70,000+</span>
+                </div>
+                <div class="preview-factor-row">
+                  <span>Booking Advance</span>
+                  <span>10% of Confirmed Quote</span>
+                </div>
+                <div class="preview-factor-row">
+                  <span>Remaining 90% Balance</span>
+                  <span>On Installation</span>
+                </div>
+              </div>
+              <p class="preview-card-note">
+                &bull; Advance is calculated strictly from the confirmed final quote, not the minimum range.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION B: PRICING APPROACH (3 FACTORS) -->
+    <section class="pricing-factors-section">
+      <div class="container">
+        <div class="section-centered-header">
+          <div class="pricing-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            HOW QUOTES WORK
+          </div>
+          <h2 class="section-heading-title">What Influences a Water Treatment Quote?</h2>
+          <p class="section-heading-desc">
+            Because every household water supply is unique, quotes are calculated using three verifiable engineering parameters.
+          </p>
+        </div>
+
+        <div class="factors-grid">
+          <div class="factor-card">
+            <div class="factor-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5s-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/></svg>
+            </div>
+            <h3 class="factor-title">1. Water Conditions</h3>
+            <p class="factor-desc">
+              Your exact grains per gallon (GPG) hardness, total dissolved solids (TDS), and presence of iron, sulfur, or chloramines dictate the required resin type and filtration stages.
+            </p>
+          </div>
+
+          <div class="factor-card">
+            <div class="factor-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3 class="factor-title">2. System Type &amp; Capacity</h3>
+            <p class="factor-desc">
+              Tank grain capacity (32,000 to 64,000+ grains) is sized to your household member count, daily water volume, and peak gallon-per-minute (GPM) flow rate.
+            </p>
+          </div>
+
+          <div class="factor-card">
+            <div class="factor-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="factor-title">3. Installation Requirements</h3>
+            <p class="factor-desc">
+              Plumbing scope varies depending on whether your garage has an existing pre-plumbed softener loop or requires new copper/PEX line runs, drain routing, or electrical outlets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION C: SOLUTION COMPARISON CARDS (INDICATIVE PRICE RANGES) -->
+    <section class="pricing-plans-section" id="pricingPlans">
+      <div class="container">
+        <div class="section-centered-header">
+          <div class="pricing-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            INDICATIVE PRICE RANGES
+          </div>
+          <h2 class="section-heading-title">Explore Water Care Solution Packages</h2>
+          <p class="section-heading-desc">
+            Select a solution package below to prefill your details and schedule an in-home assessment.
+          </p>
+        </div>
+
+        <div class="plans-grid">
+          <!-- Card 1: Essential Water Care -->
+          <div class="plan-card" id="cardEssential">
+            <div class="plan-card-header">
+              <h3 class="plan-card-title">Essential Water Care</h3>
+              <p class="plan-card-subtitle">
+                Suitable for households exploring drinking-water filtration and point-of-use purification.
+              </p>
+              <div class="plan-pricing-box">
+                <div class="plan-pricing-label-sub">Indicative Price Range</div>
+                <div class="plan-pricing-range">₹8,000–₹15,000</div>
+                <div class="plan-advance-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Advance: 10% of Confirmed Quote
+                </div>
+              </div>
+            </div>
+
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Drinking-water filtration options</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Water requirements assessment</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>System selection guidance</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Installation requirements review</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Filter care guidance</span>
+              </li>
+            </ul>
+
+            <div class="plan-card-footer">
+              <button class="plan-card-btn plan-btn-outline plan-select-trigger" data-plan-id="essential-water-care">
+                Book Now &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2: Whole-Home Protection (Featured) -->
+          <div class="plan-card featured" id="cardWholeHome">
+            <span class="plan-featured-badge">Most Popular Choice</span>
+            <div class="plan-card-header">
+              <h3 class="plan-card-title">Whole-Home Protection</h3>
+              <p class="plan-card-subtitle">
+                Suitable for households considering whole-home water softening to protect fixtures and appliances.
+              </p>
+              <div class="plan-pricing-box">
+                <div class="plan-pricing-label-sub">Indicative Price Range</div>
+                <div class="plan-pricing-range">₹20,000–₹45,000</div>
+                <div class="plan-advance-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Advance: 10% of Confirmed Quote
+                </div>
+              </div>
+            </div>
+
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Household water requirements assessment</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Water softener selection &amp; sizing</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Capacity recommendations</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Installation planning &amp; bypass loop</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Maintenance guidance &amp; salt care</span>
+              </li>
+            </ul>
+
+            <div class="plan-card-footer">
+              <button class="plan-card-btn plan-btn-primary plan-select-trigger" data-plan-id="whole-home-protection">
+                Book Now &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 3: Advanced Water Treatment -->
+          <div class="plan-card" id="cardAdvanced">
+            <div class="plan-card-header">
+              <h3 class="plan-card-title">Advanced Water Treatment</h3>
+              <p class="plan-card-subtitle">
+                Suitable for households requiring combined water softening and advanced filtration solutions.
+              </p>
+              <div class="plan-pricing-box">
+                <div class="plan-pricing-label-sub">Indicative Price Range</div>
+                <div class="plan-pricing-range">₹30,000–₹70,000+</div>
+                <div class="plan-advance-tag">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  Advance: 10% of Confirmed Quote
+                </div>
+              </div>
+            </div>
+
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Multi-parameter water assessment</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Combined treatment options (Softener + RO)</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>System compatibility &amp; flow rate review</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Customized installation planning</span>
+              </li>
+              <li class="plan-feature-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Ongoing maintenance &amp; filter care</span>
+              </li>
+            </ul>
+
+            <div class="plan-card-footer">
+              <button class="plan-card-btn plan-btn-outline plan-select-trigger" data-plan-id="advanced-water-treatment">
+                Book Now &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Required Disclaimer Note Below Cards -->
+        <div class="pricing-disclaimer-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <p>
+            <strong>Transparent Pricing Note:</strong> Prices shown are indicative estimates. Your final quote will be confirmed after reviewing your water-treatment requirements and installation details. The 10% advance is calculated strictly from the confirmed quote.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION D: INTERACTIVE SERVICE BOOKING & ADVANCE PAYMENT WIZARD -->
+    <section class="booking-wizard-section" id="serviceBookingWizard">
+      <div class="container">
+        <div class="wizard-container">
+          <div class="section-centered-header" style="margin-bottom:2.5rem;">
+            <div class="pricing-badge-pill">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              ONLINE APPOINTMENT &amp; ADVANCE PAYMENT
+            </div>
+            <h2 class="section-heading-title">Schedule Service &amp; Confirm Booking</h2>
+            <p class="section-heading-desc">
+              Complete the 4-step wizard to choose your schedule, review the confirmed quote, and pay the 10% advance.
+            </p>
+          </div>
+
+          <div class="wizard-card">
+            <!-- Wizard Stepper Progress Bar -->
+            <div class="wizard-stepper" role="tablist" aria-label="Booking Steps">
+              <div class="stepper-track-line"></div>
+              <div class="stepper-progress-fill" id="stepperProgressFill"></div>
+
+              <div class="step-indicator active" id="stepInd1" role="tab" aria-selected="true">
+                <div class="step-bubble">1</div>
+                <span class="step-label">Your Details</span>
+              </div>
+
+              <div class="step-indicator" id="stepInd2" role="tab" aria-selected="false">
+                <div class="step-bubble">2</div>
+                <span class="step-label">Schedule</span>
+              </div>
+
+              <div class="step-indicator" id="stepInd3" role="tab" aria-selected="false">
+                <div class="step-bubble">3</div>
+                <span class="step-label">Review &amp; Pay</span>
+              </div>
+
+              <div class="step-indicator" id="stepInd4" role="tab" aria-selected="false">
+                <div class="step-bubble">4</div>
+                <span class="step-label">Confirmation</span>
+              </div>
+            </div>
+
+            <!-- Wizard Body -->
+            <div class="wizard-body">
+              <!-- STEP 1: CUSTOMER DETAILS -->
+              <div class="wizard-step-pane active" id="wizardStepPane1">
+                <div class="step-header">
+                  <h3 class="step-header-title">Step 1: Contact &amp; Service Address</h3>
+                  <p class="step-header-desc">Please provide your contact information and installation address.</p>
+                </div>
+
+                <form id="step1Form" onsubmit="return false;">
+                  <div class="wizard-form-grid">
+                    <div class="form-group form-full-col">
+                      <label class="form-label" for="wizardSelectedPlan">
+                        Selected Service / Plan <span class="required-star">*</span>
+                      </label>
+                      <select id="wizardSelectedPlan" class="form-control">
+                        <option value="essential-water-care">Essential Water Care (Indicative: ₹8,000–₹15,000)</option>
+                        <option value="whole-home-protection" selected>Whole-Home Protection (Indicative: ₹20,000–₹45,000)</option>
+                        <option value="advanced-water-treatment">Advanced Water Treatment (Indicative: ₹30,000–₹70,000+)</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custFullName">
+                        Full Name <span class="required-star">*</span>
+                      </label>
+                      <input type="text" id="custFullName" class="form-control" placeholder="e.g. Ramesh Sharma" required>
+                      <span class="form-error-msg">Please enter your full name.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custEmail">
+                        Email Address <span class="required-star">*</span>
+                      </label>
+                      <input type="email" id="custEmail" class="form-control" placeholder="ramesh@example.com" required>
+                      <span class="form-error-msg">Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custPhone">
+                        Mobile Number <span class="required-star">* (10 digits)</span>
+                      </label>
+                      <input type="tel" id="custPhone" class="form-control" placeholder="9876543210" maxlength="10" required>
+                      <span class="form-error-msg">Please enter a 10-digit mobile number.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custAltPhone">
+                        Alternate Phone (Optional)
+                      </label>
+                      <input type="tel" id="custAltPhone" class="form-control" placeholder="Landline or secondary number">
+                    </div>
+
+                    <div class="form-group form-full-col">
+                      <label class="form-label" for="custAddress">
+                        Full Service Address (House / Flat / Street) <span class="required-star">*</span>
+                      </label>
+                      <input type="text" id="custAddress" class="form-control" placeholder="e.g. Flat 402, Green Meadows, 5th Main" required>
+                      <span class="form-error-msg">Please provide your complete street address.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custCity">
+                        City <span class="required-star">*</span>
+                      </label>
+                      <input type="text" id="custCity" class="form-control" placeholder="e.g. Bengaluru" required>
+                      <span class="form-error-msg">City is required.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custState">
+                        State <span class="required-star">*</span>
+                      </label>
+                      <input type="text" id="custState" class="form-control" placeholder="e.g. Karnataka" required>
+                      <span class="form-error-msg">State is required.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custPincode">
+                        Postal PIN Code <span class="required-star">* (6 digits)</span>
+                      </label>
+                      <input type="text" id="custPincode" class="form-control" placeholder="560001" maxlength="6" required>
+                      <span class="form-error-msg">Please enter a 6-digit PIN code.</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="custWaterConcern">
+                        Primary Water Concern <span class="required-star">*</span>
+                      </label>
+                      <select id="custWaterConcern" class="form-control">
+                        <option value="Hard water and mineral scale">Hard water and mineral scale</option>
+                        <option value="Drinking-water filtration">Drinking-water filtration</option>
+                        <option value="Water taste or odor">Water taste or odor</option>
+                        <option value="Whole-home water treatment">Whole-home water treatment</option>
+                        <option value="Not sure — need a water assessment">Not sure — need a water assessment</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group form-full-col">
+                      <label class="form-label" for="custNotes">
+                        Additional Requirements (Optional)
+                      </label>
+                      <textarea id="custNotes" class="form-control" rows="2" placeholder="e.g. In-home loop is located in the basement, preferred gate pass details..."></textarea>
+                    </div>
+                  </div>
+
+                  <div class="wizard-actions-footer">
+                    <div></div>
+                    <button type="button" class="btn-wizard-next" id="btnNextStep1">
+                      Continue to Schedule &rarr;
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- STEP 2: APPOINTMENT SCHEDULER -->
+              <div class="wizard-step-pane" id="wizardStepPane2">
+                <div class="step-header">
+                  <h3 class="step-header-title">Step 2: Choose Service Date &amp; Time Slot</h3>
+                  <p class="step-header-desc">Select when you would like our certified technician to visit your residence.</p>
+                </div>
+
+                <div class="wizard-form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="appointmentDate">
+                      Select Preferred Date <span class="required-star">*</span>
+                    </label>
+                    <input type="date" id="appointmentDate" class="form-control" required>
+                    <span class="form-error-msg">Please select a valid future date.</span>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">
+                      Available Time Slots <span class="required-star">*</span>
+                    </label>
+                    <div class="time-slots-grid">
+                      <div class="time-slot-btn selected" data-slot-id="slot-1" data-slot-label="09:00 AM – 11:00 AM">
+                        <div>
+                          <span class="time-slot-label">09:00 AM – 11:00 AM</span>
+                          <span class="time-slot-period">Morning Slot</span>
+                        </div>
+                        <div class="time-slot-radio-circle"></div>
+                      </div>
+
+                      <div class="time-slot-btn" data-slot-id="slot-2" data-slot-label="11:00 AM – 01:00 PM">
+                        <div>
+                          <span class="time-slot-label">11:00 AM – 01:00 PM</span>
+                          <span class="time-slot-period">Noon Slot</span>
+                        </div>
+                        <div class="time-slot-radio-circle"></div>
+                      </div>
+
+                      <div class="time-slot-btn" data-slot-id="slot-3" data-slot-label="02:00 PM – 04:00 PM">
+                        <div>
+                          <span class="time-slot-label">02:00 PM – 04:00 PM</span>
+                          <span class="time-slot-period">Afternoon Slot</span>
+                        </div>
+                        <div class="time-slot-radio-circle"></div>
+                      </div>
+
+                      <div class="time-slot-btn" data-slot-id="slot-4" data-slot-label="04:00 PM – 06:00 PM">
+                        <div>
+                          <span class="time-slot-label">04:00 PM – 06:00 PM</span>
+                          <span class="time-slot-period">Evening Slot</span>
+                        </div>
+                        <div class="time-slot-radio-circle"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="wizard-actions-footer">
+                  <button type="button" class="btn-wizard-prev" id="btnPrevStep2">
+                    &larr; Back to Details
+                  </button>
+                  <button type="button" class="btn-wizard-next" id="btnNextStep2">
+                    Review &amp; Pay Advance &rarr;
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 3: REVIEW & PAY ADVANCE -->
+              <div class="wizard-step-pane" id="wizardStepPane3">
+                <div class="step-header">
+                  <h3 class="step-header-title">Step 3: Review Booking &amp; Pay 10% Advance</h3>
+                  <p class="step-header-desc">Review your verified booking details and complete the advance payment to lock your appointment.</p>
+                </div>
+
+                <div class="review-summary-grid">
+                  <!-- Left: Customer Details Summary -->
+                  <div class="review-details-card">
+                    <h4 class="review-section-title">Booking Summary</h4>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Customer Name:</span>
+                      <span class="review-item-val" id="revCustomerName">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Contact:</span>
+                      <span class="review-item-val" id="revCustomerContact">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Service Address:</span>
+                      <span class="review-item-val" id="revServiceAddress">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Selected Solution:</span>
+                      <span class="review-item-val" id="revSelectedPlan">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Indicative Range:</span>
+                      <span class="review-item-val" id="revIndicativeRange">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Appointment Slot:</span>
+                      <span class="review-item-val" id="revAppointmentSlot" style="color:var(--color-primary);">&mdash;</span>
+                    </div>
+                  </div>
+
+                  <!-- Right: Confirmed Quote Calculation Card -->
+                  <div class="quote-calc-card">
+                    <div class="quote-calc-title">
+                      <span>Confirmed Quote</span>
+                      <span class="quote-confirmed-badge">Quote Verified</span>
+                    </div>
+
+                    <div class="quote-calc-row">
+                      <span>Standard Confirmed Quote:</span>
+                      <strong id="revConfirmedQuote">₹32,000</strong>
+                    </div>
+
+                    <div class="quote-calc-row">
+                      <span>Advance Required:</span>
+                      <span id="revAdvancePercent">10%</span>
+                    </div>
+
+                    <div class="quote-calc-row highlight-advance">
+                      <span>Advance Amount Due Now:</span>
+                      <span id="revAdvanceAmount">₹3,200</span>
+                    </div>
+
+                    <div class="quote-calc-row">
+                      <span>Remaining Balance:</span>
+                      <strong id="revRemainingBalance">₹28,800</strong>
+                    </div>
+
+                    <div class="quote-balance-note">
+                      * Remaining balance of <strong id="revRemainingNote">90%</strong> is payable strictly upon successful installation &amp; water testing verification.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Payment Method Selection -->
+                <div style="margin-top:1.5rem;">
+                  <label class="form-label">Select Advance Payment Mode</label>
+                  <div class="payment-methods-grid">
+                    <div class="payment-method-chip selected" data-method="upi">
+                      <span class="pay-chip-title">UPI / QR Code</span>
+                      <span class="pay-chip-sub">GPay, PhonePe, Paytm</span>
+                    </div>
+
+                    <div class="payment-method-chip" data-method="card">
+                      <span class="pay-chip-title">Credit / Debit Card</span>
+                      <span class="pay-chip-sub">Visa, Mastercard, RuPay</span>
+                    </div>
+
+                    <div class="payment-method-chip" data-method="netbanking">
+                      <span class="pay-chip-title">Net Banking</span>
+                      <span class="pay-chip-sub">All Major Indian Banks</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Required Checkbox Agreement -->
+                <label class="terms-agreement-box">
+                  <input type="checkbox" id="termsAgreementCheck">
+                  <span>
+                    I have reviewed the booking details, confirmed quote, advance amount, and cancellation/refund terms. I understand that the advance payment confirms my scheduled time slot.
+                  </span>
+                </label>
+
+                <div class="wizard-actions-footer">
+                  <button type="button" class="btn-wizard-prev" id="btnPrevStep3">
+                    &larr; Back to Schedule
+                  </button>
+                  <button type="button" class="btn-wizard-next" id="btnPayAdvance" disabled>
+                    Pay Advance &amp; Confirm Booking &rarr;
+                  </button>
+                </div>
+              </div>
+
+              <!-- STEP 4: BOOKING CONFIRMATION -->
+              <div class="wizard-step-pane" id="wizardStepPane4">
+                <div class="confirmation-card">
+                  <div class="confirmation-success-icon">
+                    <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+
+                  <h3 class="confirmation-title">Booking Confirmed!</h3>
+                  <p class="confirmation-message">
+                    Your advance payment has been verified and your AquaPure service appointment is confirmed. Your booking reference and appointment details are shown below.
+                  </p>
+
+                  <div class="booking-ref-pill">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                    </svg>
+                    Booking Ref: <span id="confBookingRef">AQ-2026-89427</span>
+                  </div>
+
+                  <div class="confirmation-summary-table">
+                    <div class="review-item-row">
+                      <span class="review-item-label">Customer Name:</span>
+                      <span class="review-item-val" id="confCustName">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Selected Solution:</span>
+                      <span class="review-item-val" id="confServiceName">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Confirmed Appointment:</span>
+                      <span class="review-item-val" id="confDateTime" style="color:var(--color-primary);">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Service Address:</span>
+                      <span class="review-item-val" id="confAddress">&mdash;</span>
+                    </div>
+                    <div class="review-item-row" style="border-top:1px solid var(--color-card-border); padding-top:0.6rem; margin-top:0.6rem;">
+                      <span class="review-item-label">Confirmed Final Quote:</span>
+                      <span class="review-item-val" id="confTotalQuote">&mdash;</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Advance Paid (10%):</span>
+                      <span class="review-item-val" id="confAdvancePaid" style="color:#10B981;">&mdash; (Verified)</span>
+                    </div>
+                    <div class="review-item-row">
+                      <span class="review-item-label">Remaining Balance Due:</span>
+                      <span class="review-item-val" id="confRemaining" style="color:var(--color-primary);">&mdash;</span>
+                    </div>
+                  </div>
+
+                  <div class="confirmation-actions-row">
+                    <button type="button" class="btn btn-blue" id="btnPrintBookingSummary">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                      </svg>
+                      Print Booking Receipt
+                    </button>
+                    <a href="index.html" class="btn btn-outline-blue">
+                      Return to Home
+                    </a>
+                    <button type="button" class="btn-wizard-prev" id="btnStartNewBooking">
+                      Book Another Service
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION E: COMPARE SERVICE OPTIONS TABLE -->
+    <section class="pricing-compare-section">
+      <div class="container">
+        <div class="section-centered-header">
+          <div class="pricing-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            FEATURE COMPARISON
+          </div>
+          <h2 class="section-heading-title">Compare Solution Scope</h2>
+          <p class="section-heading-desc">
+            A side-by-side breakdown of treatment focus, household coverage, and maintenance requirements.
+          </p>
+        </div>
+
+        <div class="compare-table-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Factor / Feature</th>
+                <th>Essential Care</th>
+                <th class="compare-highlight-cell">Whole-Home Softening</th>
+                <th>Advanced Treatment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="compare-factor-cell">Indicative Price Range</td>
+                <td>₹8,000–₹15,000</td>
+                <td class="compare-highlight-cell">₹20,000–₹45,000</td>
+                <td>₹30,000–₹70,000+</td>
+              </tr>
+              <tr>
+                <td class="compare-factor-cell">Advance Due on Booking</td>
+                <td>10% of Confirmed Quote</td>
+                <td class="compare-highlight-cell">10% of Confirmed Quote</td>
+                <td>10% of Confirmed Quote</td>
+              </tr>
+              <tr>
+                <td class="compare-factor-cell">Primary Purpose</td>
+                <td>Drinking water taste &amp; chlorine reduction</td>
+                <td class="compare-highlight-cell">Limescale elimination &amp; plumbing protection</td>
+                <td>Complete whole-home soft water + ultra-pure drinking</td>
+              </tr>
+              <tr>
+                <td class="compare-factor-cell">Household Coverage</td>
+                <td>Single kitchen tap &amp; refrigerator</td>
+                <td class="compare-highlight-cell">All taps, showers, heaters &amp; appliances</td>
+                <td>Full home + dedicated 0.0001-micron drinking tap</td>
+              </tr>
+              <tr>
+                <td class="compare-factor-cell">Water Testing Required</td>
+                <td>Basic Chlorine / TDS Check</td>
+                <td class="compare-highlight-cell">12-Point Hardness &amp; GPG Sizing Audit</td>
+                <td>Full Multi-Parameter Mineral &amp; TDS Panel</td>
+              </tr>
+              <tr>
+                <td class="compare-factor-cell">Installation Location</td>
+                <td>Under kitchen sink</td>
+                <td class="compare-highlight-cell">Main water entry / Garage / Utility room</td>
+                <td>Main water loop + under kitchen sink</td>
+              </tr>
+              <tr>
+                <td class="compare-factor-cell">Routine Maintenance</td>
+                <td>Cartridge swap every 6–12 months</td>
+                <td class="compare-highlight-cell">Monthly salt bag refill (~40 lbs)</td>
+                <td>Salt refill + annual RO filter sanitization</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION F: PRICING PROCESS (4 STEPS) -->
+    <section class="pricing-process-section">
+      <div class="container">
+        <div class="section-centered-header">
+          <div class="pricing-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            HOW TO GET STARTED
+          </div>
+          <h2 class="section-heading-title">Four Steps to Transparent Pricing</h2>
+          <p class="section-heading-desc">
+            We guide you from initial water diagnostic testing to certified installation with complete clarity.
+          </p>
+        </div>
+
+        <div class="pricing-steps-grid">
+          <div class="pricing-step-card">
+            <div class="pricing-step-badge">1</div>
+            <h3 class="pricing-step-title">Choose Your Plan</h3>
+            <p class="pricing-step-desc">
+              Select a solution tier matching your home's water requirements and fill out your address.
+            </p>
+          </div>
+
+          <div class="pricing-step-card">
+            <div class="pricing-step-badge">2</div>
+            <h3 class="pricing-step-title">Schedule Appointment</h3>
+            <p class="pricing-step-desc">
+              Pick a convenient date and time window for our technician to visit your home.
+            </p>
+          </div>
+
+          <div class="pricing-step-card">
+            <div class="pricing-step-badge">3</div>
+            <h3 class="pricing-step-title">Pay 10% Advance</h3>
+            <p class="pricing-step-desc">
+              Review your confirmed quote and pay the 10% advance online via UPI, Card, or Net Banking.
+            </p>
+          </div>
+
+          <div class="pricing-step-card">
+            <div class="pricing-step-badge">4</div>
+            <h3 class="pricing-step-title">Installation &amp; Final Pay</h3>
+            <p class="pricing-step-desc">
+              Technician performs testing &amp; installation. The remaining 90% balance is paid on completion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION G: PRICING FAQS ACCORDION -->
+    <section class="pricing-faq-section">
+      <div class="container">
+        <div class="section-centered-header">
+          <div class="pricing-badge-pill">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            PRICING FAQS
+          </div>
+          <h2 class="section-heading-title">Frequently Asked Pricing Questions</h2>
+          <p class="section-heading-desc">
+            Clear answers about equipment costs, advance payments, installation factors, and warranty coverage.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list">
+          <div class="faq-accordion-item open">
+            <button class="faq-accordion-header" aria-expanded="true" aria-controls="faq-p-1">
+              <span>Why is an advance payment required for service booking?</span>
+              <span class="faq-accordion-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-accordion-body" id="faq-p-1">
+              <p>The 10% advance payment reserves your dedicated certified technician and time slot, initiates equipment prep from our regional warehouse, and prevents scheduling conflicts. The remaining 90% balance is payable only after installation and water testing verification.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-p-2">
+              <span>How is the final confirmed quote determined?</span>
+              <span class="faq-accordion-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-accordion-body" id="faq-p-2">
+              <p>The final quote is calculated based on your measured water hardness (GPG), household peak flow rate (GPM), chosen system capacity (e.g. 32K vs 48K grains), and whether your home has a pre-existing soft water loop or requires new supply piping.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-p-3">
+              <span>What happens if I need to reschedule or cancel my appointment?</span>
+              <span class="faq-accordion-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-accordion-body" id="faq-p-3">
+              <p>You can reschedule your appointment up to 12 hours before the scheduled slot at zero charge. If cancelled prior to dispatch, your 10% advance is refunded back to your original payment method within 3–5 business days.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-p-4">
+              <span>Are there any hidden travel or inspection surcharges?</span>
+              <span class="faq-accordion-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-accordion-body" id="faq-p-4">
+              <p>None. All quotes include certified delivery, all necessary valves, standard bypass piping, initial salt/filter charge, and full labor warranty.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-p-5">
+              <span>What payment methods are accepted for the advance and balance?</span>
+              <span class="faq-accordion-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-accordion-body" id="faq-p-5">
+              <p>We accept all major UPI apps (Google Pay, PhonePe, Paytm, BHIM), Credit/Debit cards (Visa, MasterCard, RuPay), Net Banking, and direct electronic transfers.</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-p-6">
+              <span>What maintenance expenses should I expect after installation?</span>
+              <span class="faq-accordion-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            <div class="faq-accordion-body" id="faq-p-6">
+              <p>For whole-home softeners, the primary recurring expense is water softener salt (approximately 1 bag of high-purity solar salt per month, ~₹500–₹800). For RO systems, annual cartridge replacements maintain optimal water quality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MAIN CTA (Exact Home 1 Deep Water Blue Banner with Organic Waves)
+         ========================================================================== -->
+    <section class="main-cta-section" id="mainCTA">
+      
+      <!-- Animated Top Water-Wave Boundary -->
+      <div class="cta-wave-top-wrap" aria-hidden="true">
+        <svg class="cta-wave-svg cta-wave-top-svg" viewBox="0 0 2880 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cta-wave-fill-top" d="M 0,35 C 80,48 110,58 160,58 C 230,58 280,22 340,22 C 410,22 460,68 520,68 C 590,68 640,38 700,38 C 770,38 820,72 880,72 C 950,72 1000,28 1060,28 C 1130,28 1180,54 1240,54 C 1310,54 1370,26 1440,35 C 1520,48 1550,58 1600,58 C 1670,58 1720,22 1780,22 C 1850,22 1900,68 1960,68 C 2030,68 2080,38 2140,38 C 2210,38 2260,72 2320,72 C 2390,72 2440,28 2500,28 C 2570,28 2620,54 2680,54 C 2750,54 2810,26 2880,35 L 2880,0 L 0,0 Z"/>
+          <path class="cta-wave-highlight" d="M 0,35 C 80,48 110,58 160,58 C 230,58 280,22 340,22 C 410,22 460,68 520,68 C 590,68 640,38 700,38 C 770,38 820,72 880,72 C 950,72 1000,28 1060,28 C 1130,28 1180,54 1240,54 C 1310,54 1370,26 1440,35 C 1520,48 1550,58 1600,58 C 1670,58 1720,22 1780,22 C 1850,22 1900,68 1960,68 C 2030,68 2080,38 2140,38 C 2210,38 2260,72 2320,72 C 2390,72 2440,28 2500,28 C 2570,28 2620,54 2680,54 C 2750,54 2810,26 2880,35"/>
+        </svg>
+      </div>
+
+      <!-- Animated Bottom Water-Wave Boundary -->
+      <div class="cta-wave-bottom-wrap" aria-hidden="true">
+        <svg class="cta-wave-svg cta-wave-bottom-svg" viewBox="0 0 2880 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cta-wave-fill-bottom" d="M 0,48 C 70,36 120,24 180,24 C 250,24 300,68 360,68 C 430,68 480,32 540,32 C 610,32 660,62 720,62 C 790,62 840,40 900,40 C 970,40 1020,74 1080,74 C 1150,74 1200,28 1260,28 C 1330,28 1380,58 1440,48 C 1510,36 1560,24 1620,24 C 1690,24 1740,68 1800,68 C 1870,68 1920,32 1980,32 C 2050,32 2100,62 2160,62 C 2230,62 2280,40 2340,40 C 2410,40 2460,74 2520,74 C 2590,74 2640,28 2700,28 C 2770,28 2820,58 2880,48 L 2880,90 L 0,90 Z"/>
+          <path class="cta-wave-highlight" d="M 0,48 C 70,36 120,24 180,24 C 250,24 300,68 360,68 C 430,68 480,32 540,32 C 610,32 660,62 720,62 C 790,62 840,40 900,40 C 970,40 1020,74 1080,74 C 1150,74 1200,28 1260,28 C 1330,28 1380,58 1440,48 C 1510,36 1560,24 1620,24 C 1690,24 1740,68 1800,68 C 1870,68 1920,32 1980,32 C 2050,32 2100,62 2160,62 C 2230,62 2280,40 2340,40 C 2410,40 2460,74 2520,74 C 2590,74 2640,28 2700,28 C 2770,28 2820,58 2880,48"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title">Not Sure Which Water Solution You Need?</h2>
+          <p class="cta-desc">
+            Start with a free water test and discover the right solution for your home's water.
+          </p>
+
+          <div class="cta-buttons-wrap">
+            <button class="btn btn-white trigger-water-test">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              Book a Free Water Test
+            </button>
+            <a href="contact.html" class="btn btn-white-outline">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Exact Home 1 Implementation)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-col-brand">
+          <div class="footer-brand-title">Aqua<span>Pure</span></div>
+          <p>
+            Certified water softening and filtration specialists dedicated to protecting family health, home plumbing, and everyday water purity.
+          </p>
+          <div class="footer-social-links">
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="home-2.html" class="footer-link-item">Home 2</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="services.html" class="footer-link-item">Services</a></li>
+            <li><a href="pricing.html" class="footer-link-item">Pricing</a></li>
+            <li><a href="blog.html" class="footer-link-item">Blog</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+1 (800) 555-AQUA<br>Mon-Sat: 8am - 7pm</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>support@aquapurewater.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>450 Aqua Vista Blvd, Suite 200</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Service Areas</div>
+          <ul class="footer-links-list">
+            <li><span class="footer-link-item">Metro Suburbs &amp; North Valley</span></li>
+            <li><span class="footer-link-item">Green Hills &amp; Oakridge</span></li>
+            <li><span class="footer-link-item">Coastal County &amp; Bayshore</span></li>
+            <li><span class="footer-link-item">Westside Foothills</span></li>
+            <li><span class="footer-link-item">Eastern Lake District</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 AquaPure Solutions Inc. All rights reserved. Professional Water Treatment.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#siteFooter">Privacy Policy</a>
+          <a href="#siteFooter">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOOKING MODAL -->
+  <div class="modal-overlay" id="testBookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitlePricing">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modalTitlePricing">Book Your Free Water Test</h3>
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="bookingForm">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. John Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phoneNum">Phone Number</label>
+              <input type="tel" id="phoneNum" class="form-control" placeholder="(555) 000-0000" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="emailAddr">Email Address</label>
+            <input type="email" id="emailAddr" class="form-control" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="waterIssue">Primary Water Concern</label>
+            <select id="waterIssue" class="form-control">
+              <option value="hard-water">Hard water / Scale buildup on faucets</option>
+              <option value="taste-odor">Bad taste, chlorine or sulfur odor</option>
+              <option value="skin-hair">Dry skin and dull hair after showers</option>
+              <option value="whole-home">Comprehensive whole-home testing</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-blue" style="width:100%;margin-top:.5rem;">Schedule In-Home Water Test</button>
+        </form>
+        <div class="booking-success-message" id="bookingSuccess">
+          <div class="success-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          </div>
+          <h4 class="success-title">Testing Request Received!</h4>
+          <p class="success-desc">A certified AquaPure water specialist will contact you within 2 business hours.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/pricing-data.js"></script>
+  <script src="js/pricing.js"></script>
+  <script src="js/auth.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

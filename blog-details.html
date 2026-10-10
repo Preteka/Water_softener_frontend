@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert water treatment guide by AquaPure Water Solutions.">
+  <meta name="theme-color" content="#006FB9">
+  <title>Article Details | AquaPure Water Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/blog-details.css">
+</head>
+<body>
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-bar" id="readingProgressBar"></div>
+
+  <!-- ==========================================================================
+       HEADER / NAVIGATION (Exact Home 1 Implementation)
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Brand Logo (Left) -->
+        <a href="index.html" class="brand-logo" aria-label="AquaPure Home">
+          <svg class="logo-icon-svg" viewBox="0 0 36 36" fill="none">
+            <path d="M18 4C18 4 9 14.5 9 21.5C9 26.47 13.03 30.5 18 30.5C22.97 30.5 27 26.47 27 21.5C27 14.5 18 4 18 4Z" fill="url(#logo_grad)"/>
+            <path d="M18 9C18 9 12 16.5 12 21.5C12 24.8 14.69 27.5 18 27.5C21.31 27.5 24 24.8 24 21.5C24 16.5 18 9 18 9Z" fill="#FFFFFF" fill-opacity="0.35"/>
+            <defs>
+              <linearGradient id="logo_grad" x1="9" y1="4" x2="27" y2="30.5" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0B9FE3"/>
+                <stop offset="1" stop-color="#006FB9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="logo-text-group">
+            <span class="brand-title">Aqua<span>Pure</span></span>
+            <span class="brand-sub">Water Solutions</span>
+          </div>
+        </a>
+
+        <!-- Center Navigation Menu -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home-2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="pricing.html" class="nav-link">Pricing</a>
+          <a href="blog.html" class="nav-link active">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          
+          <!-- Dark / Light Mode Toggle -->
+          <button class="header-action-btn" id="themeToggleBtn" aria-label="Toggle dark mode" title="Toggle theme">
+            <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- LTR / RTL Direction Toggle -->
+          <button class="header-action-btn" id="dirToggleBtn" aria-label="Toggle text direction" title="Switch LTR/RTL">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+            </svg>
+            <span id="dirLabel">RTL</span>
+          </button>
+
+          <!-- Profile Icon with Dropdown -->
+          <div class="profile-dropdown-wrapper" id="profileDropdownWrapper">
+            <button class="header-action-btn" id="profileMenuBtn" aria-label="User Account" title="My Account" aria-expanded="false" aria-haspopup="true" style="padding: 0 0.6rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </button>
+            <div class="profile-dropdown-panel" id="profileDropdownPanel" role="menu">
+              <!-- Populated by main.js profile dropdown logic -->
+            </div>
+          </div>
+
+          <!-- Primary CTA Button -->
+          <a href="#testBookingModal" class="header-cta-pill trigger-water-test">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            Free Water Test
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open mobile menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div>
+      <div class="mobile-links">
+        <a href="index.html" class="mobile-link">Home <span>&rarr;</span></a>
+        <a href="home-2.html" class="mobile-link">Home 2 <span>&rarr;</span></a>
+        <a href="about.html" class="mobile-link">About Us <span>&rarr;</span></a>
+        <a href="services.html" class="mobile-link">Services <span>&rarr;</span></a>
+        <a href="pricing.html" class="mobile-link">Pricing <span>&rarr;</span></a>
+        <a href="blog.html" class="mobile-link active">Blog <span>&rarr;</span></a>
+        <a href="contact.html" class="mobile-link">Contact <span>&rarr;</span></a>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+        <button class="header-action-btn" id="mobileThemeToggleBtn" style="width: 100%; justify-content: flex-start; height: 42px;">
+          <svg id="mobileThemeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <span id="themeText">Dark Mode</span>
+        </button>
+        <button class="header-action-btn" id="mobileDirToggleBtn" style="width: 100%; justify-content: flex-start; height: 42px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="17 1 21 5 17 9"></polyline>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+          </svg>
+          <span id="mobileDirLabel">Switch to RTL</span>
+        </button>
+      </div>
+    </div>
+
+    <a href="#testBookingModal" class="btn btn-blue trigger-water-test" style="width: 100%;">
+      Book a Free Water Test
+    </a>
+  </div>
+
+  <main>
+    <!-- ARTICLE NOT FOUND STATE -->
+    <section class="article-not-found-section" id="articleNotFound" style="display:none;">
+      <div class="container">
+        <div class="not-found-card">
+          <div class="empty-state-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+          </div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--color-text-navy); margin-bottom: 0.75rem;">Article Not Found</h2>
+          <p style="color: var(--color-text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 2rem;">The water care guide you are looking for does not exist or may have been moved. Please browse our complete knowledge hub.</p>
+          <a href="blog.html" class="btn btn-blue">Back to Knowledge Hub &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE WRAPPER (Populated Dynamically) -->
+    <article id="articleWrapper">
+
+      <!-- ARTICLE HERO -->
+      <section class="article-hero-section" id="articleHero">
+        <div class="container">
+          <div class="article-hero-inner">
+            <div class="article-top-nav-row">
+              <a href="blog.html" class="back-to-blog-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Back to All Articles
+              </a>
+            </div>
+
+            <div class="article-badge-wrap">
+              <span class="article-cat-pill" id="articleCategoryBadge">Category</span>
+            </div>
+
+            <h1 class="article-hero-title" id="articleMainTitle">Article Main Headline</h1>
+            <p class="article-hero-intro" id="articleIntroText">Article introductory overview text explaining the core topic...</p>
+
+            <!-- Metadata & Action Row -->
+            <div class="article-meta-bar">
+              <div class="article-author-info">
+                <img src="" alt="" id="articleAuthorAvatar" class="article-author-img">
+                <div class="author-meta-details">
+                  <h4 id="articleAuthorName">Author Name</h4>
+                  <p id="articleAuthorRole">Author Role</p>
+                </div>
+              </div>
+
+              <div class="article-reading-stats">
+                <span id="articlePublishDate">Published Date</span>
+                <span class="meta-dot">&bull;</span>
+                <span id="articleReadingTime">Reading Time</span>
+              </div>
+
+              <div class="article-actions-group">
+                <button type="button" class="action-btn-pill" id="shareArticleBtn" aria-label="Share article">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                  Share
+                </button>
+                <button type="button" class="action-btn-pill" id="copyLinkBtn" aria-label="Copy link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  Copy Link
+                </button>
+              </div>
+            </div>
+
+            <!-- Large Cover Image Container -->
+            <div class="article-cover-container">
+              <div class="article-cover-wrap">
+                <img src="" alt="" id="articleCoverImage" class="article-cover-img">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- TWO-COLUMN ARTICLE BODY & STICKY SIDEBAR -->
+      <section class="article-main-section">
+        <div class="container">
+          <div class="article-layout-grid">
+
+            <!-- Left Main Column -->
+            <div class="article-content-column">
+              <!-- Structured Article Body -->
+              <div id="articleContentBody">
+                <!-- Dynamically populated by js/blog-details.js -->
+              </div>
+
+              <!-- Article Tags -->
+              <div class="article-tags-wrap" id="articleTagsRow">
+                <!-- Dynamically populated -->
+              </div>
+
+              <!-- Author Bio Card -->
+              <div class="author-bio-card">
+                <img src="" alt="" id="authorBioImg" class="author-bio-avatar">
+                <div>
+                  <h3 class="author-bio-name" id="authorBioName">Author Name</h3>
+                  <div class="author-bio-role" id="authorBioRole">Author Role</div>
+                  <p class="author-bio-desc" id="authorBioDesc">Author biography details...</p>
+                </div>
+              </div>
+
+              <!-- Prev / Next Pagination -->
+              <div class="article-pagination-row">
+                <a href="#" class="pagination-link" id="prevArticleBtn">
+                  <span class="pagination-label">&larr; Previous Guide</span>
+                  <span class="pagination-title">Previous Article Title</span>
+                </a>
+                <a href="#" class="pagination-link" id="nextArticleBtn" style="text-align:right;">
+                  <span class="pagination-label">Next Guide &rarr;</span>
+                  <span class="pagination-title">Next Article Title</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Sticky Sidebar -->
+            <aside class="article-sidebar">
+
+              <!-- Sticky Table of Contents -->
+              <div class="sidebar-card" id="tocCard">
+                <h3 class="sidebar-card-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                  Table of Contents
+                </h3>
+                <ul class="toc-list" id="tocList">
+                  <!-- Dynamically populated -->
+                </ul>
+              </div>
+
+              <!-- Quick Article Facts -->
+              <div class="sidebar-card sidebar-facts-card">
+                <h3 class="sidebar-card-title">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  Quick Water Facts
+                </h3>
+                <div class="sidebar-facts-list">
+                  <div class="sidebar-fact-row">
+                    <span class="fact-label">Category</span>
+                    <span class="fact-value" id="sidebarCategory">Hard Water</span>
+                  </div>
+                  <div class="sidebar-fact-row">
+                    <span class="fact-label">Estimated Read</span>
+                    <span class="fact-value" id="sidebarReadTime">5 min read</span>
+                  </div>
+                  <div class="sidebar-fact-row">
+                    <span class="fact-label">Verified Date</span>
+                    <span class="fact-value" id="sidebarDate">Oct 2026</span>
+                  </div>
+                  <div class="sidebar-fact-row">
+                    <span class="fact-label">Specialist Level</span>
+                    <span class="fact-value">WQA Certified</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Free Water Test Sidebar CTA -->
+              <div class="sidebar-card sidebar-promo-card">
+                <span class="promo-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                  Diagnostic Audit
+                </span>
+                <h4>Not Sure About Your Water Quality?</h4>
+                <p>Start with a water test to understand your home's water conditions and explore suitable treatment options.</p>
+                <a href="#testBookingModal" class="btn btn-blue trigger-water-test" style="width:100%; text-align:center;">Book a Free Water Test</a>
+              </div>
+
+            </aside>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           RELATED ARTICLES SECTION (Continue Exploring — Preceding Home 1 CTA)
+           ========================================================================== -->
+      <section class="related-articles-section" id="relatedArticlesSection">
+        <div class="container">
+          <div class="related-header">
+            <span class="hero-journal-label">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              CONTINUE EXPLORING
+            </span>
+            <h2 class="related-title">Continue Exploring</h2>
+            <p class="related-desc">Discover more practical insights for better water at home.</p>
+          </div>
+
+          <div class="related-articles__grid" id="relatedGrid">
+            <!-- Dynamically populated by js/blog-details.js -->
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Floating Copy Toast -->
+    <div class="copy-toast" id="copyToast">Article link copied to clipboard!</div>
+
+    <!-- ==========================================================================
+         MAIN CTA (Exact Home 1 Deep Water Blue Banner with Organic Waves)
+         ========================================================================== -->
+    <section class="main-cta-section" id="mainCTA">
+      
+      <!-- Animated Top Water-Wave Boundary -->
+      <div class="cta-wave-top-wrap" aria-hidden="true">
+        <svg class="cta-wave-svg cta-wave-top-svg" viewBox="0 0 2880 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cta-wave-fill-top" d="M 0,35 C 80,48 110,58 160,58 C 230,58 280,22 340,22 C 410,22 460,68 520,68 C 590,68 640,38 700,38 C 770,38 820,72 880,72 C 950,72 1000,28 1060,28 C 1130,28 1180,54 1240,54 C 1310,54 1370,26 1440,35 C 1520,48 1550,58 1600,58 C 1670,58 1720,22 1780,22 C 1850,22 1900,68 1960,68 C 2030,68 2080,38 2140,38 C 2210,38 2260,72 2320,72 C 2390,72 2440,28 2500,28 C 2570,28 2620,54 2680,54 C 2750,54 2810,26 2880,35 L 2880,0 L 0,0 Z"/>
+          <path class="cta-wave-highlight" d="M 0,35 C 80,48 110,58 160,58 C 230,58 280,22 340,22 C 410,22 460,68 520,68 C 590,68 640,38 700,38 C 770,38 820,72 880,72 C 950,72 1000,28 1060,28 C 1130,28 1180,54 1240,54 C 1310,54 1370,26 1440,35 C 1520,48 1550,58 1600,58 C 1670,58 1720,22 1780,22 C 1850,22 1900,68 1960,68 C 2030,68 2080,38 2140,38 C 2210,38 2260,72 2320,72 C 2390,72 2440,28 2500,28 C 2570,28 2620,54 2680,54 C 2750,54 2810,26 2880,35"/>
+        </svg>
+      </div>
+
+      <!-- Animated Bottom Water-Wave Boundary -->
+      <div class="cta-wave-bottom-wrap" aria-hidden="true">
+        <svg class="cta-wave-svg cta-wave-bottom-svg" viewBox="0 0 2880 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="cta-wave-fill-bottom" d="M 0,48 C 70,36 120,24 180,24 C 250,24 300,68 360,68 C 430,68 480,32 540,32 C 610,32 660,62 720,62 C 790,62 840,40 900,40 C 970,40 1020,74 1080,74 C 1150,74 1200,28 1260,28 C 1330,28 1380,58 1440,48 C 1510,36 1560,24 1620,24 C 1690,24 1740,68 1800,68 C 1870,68 1920,32 1980,32 C 2050,32 2100,62 2160,62 C 2230,62 2280,40 2340,40 C 2410,40 2460,74 2520,74 C 2590,74 2640,28 2700,28 C 2770,28 2820,58 2880,48 L 2880,90 L 0,90 Z"/>
+          <path class="cta-wave-highlight" d="M 0,48 C 70,36 120,24 180,24 C 250,24 300,68 360,68 C 430,68 480,32 540,32 C 610,32 660,62 720,62 C 790,62 840,40 900,40 C 970,40 1020,74 1080,74 C 1150,74 1200,28 1260,28 C 1330,28 1380,58 1440,48 C 1510,36 1560,24 1620,24 C 1690,24 1740,68 1800,68 C 1870,68 1920,32 1980,32 C 2050,32 2100,62 2160,62 C 2230,62 2280,40 2340,40 C 2410,40 2460,74 2520,74 C 2590,74 2640,28 2700,28 C 2770,28 2820,58 2880,48"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title">Not Sure Which Water Solution You Need?</h2>
+          <p class="cta-desc">
+            Start with a free water test and discover the right solution for your home's water.
+          </p>
+
+          <div class="cta-buttons-wrap">
+            <button class="btn btn-white trigger-water-test">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+              Book a Free Water Test
+            </button>
+            <a href="contact.html" class="btn btn-white-outline">
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Exact Home 1 Implementation)
+       ========================================================================== -->
+  <footer class="site-footer" id="siteFooter">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <div class="footer-col-brand">
+          <div class="footer-brand-title">Aqua<span>Pure</span></div>
+          <p>
+            Certified water softening and filtration specialists dedicated to protecting family health, home plumbing, and everyday water purity.
+          </p>
+          <div class="footer-social-links">
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg>
+            </a>
+            <a href="#siteFooter" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link-item">Home</a></li>
+            <li><a href="home-2.html" class="footer-link-item">Home 2</a></li>
+            <li><a href="about.html" class="footer-link-item">About Us</a></li>
+            <li><a href="services.html" class="footer-link-item">Services</a></li>
+            <li><a href="pricing.html" class="footer-link-item">Pricing</a></li>
+            <li><a href="blog.html" class="footer-link-item">Blog</a></li>
+            <li><a href="contact.html" class="footer-link-item">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-heading">Contact Us</div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <span>+1 (800) 555-AQUA<br>Mon-Sat: 8am - 7pm</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>support@aquapurewater.com</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>450 Aqua Vista Blvd, Suite 200</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-heading">Service Areas</div>
+          <ul class="footer-links-list">
+            <li><span class="footer-link-item">Metro Suburbs &amp; North Valley</span></li>
+            <li><span class="footer-link-item">Green Hills &amp; Oakridge</span></li>
+            <li><span class="footer-link-item">Coastal County &amp; Bayshore</span></li>
+            <li><span class="footer-link-item">Westside Foothills</span></li>
+            <li><span class="footer-link-item">Eastern Lake District</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 AquaPure Solutions Inc. All rights reserved. Professional Water Treatment.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#siteFooter">Privacy Policy</a>
+          <a href="#siteFooter">Terms &amp; Conditions</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOOKING MODAL (Exact Implementation)
+       ========================================================================== -->
+  <div class="modal-overlay" id="testBookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      
+      <div class="modal-header">
+        <h3 id="modalTitle">Book Your Free Water Test</h3>
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+        <form id="bookingForm">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="fullName">Full Name</label>
+              <input type="text" id="fullName" class="form-control" placeholder="e.g. John Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phoneNum">Phone Number</label>
+              <input type="tel" id="phoneNum" class="form-control" placeholder="(555) 000-0000" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="emailAddr">Email Address</label>
+            <input type="email" id="emailAddr" class="form-control" placeholder="john@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="waterIssue">Primary Water Concern</label>
+            <select id="waterIssue" class="form-control">
+              <option value="hard-water">Hard water / Scale buildup on faucets</option>
+              <option value="taste-odor">Bad taste, chlorine or sulfur odor</option>
+              <option value="skin-hair">Dry skin and dull hair after showers</option>
+              <option value="whole-home">Comprehensive whole-home testing</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-blue" style="width: 100%; margin-top: 0.5rem;">
+            Schedule In-Home Water Test
+          </button>
+        </form>
+
+        <div class="booking-success-message" id="bookingSuccess">
+          <div class="success-icon-wrap">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h4 class="success-title">Testing Request Received!</h4>
+          <p class="success-desc">
+            A certified AquaPure water specialist will contact you within 2 business hours to confirm your free in-home appointment.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="js/blog-data.js"></script>
+  <script src="js/blog-details.js"></script>
+  <script src="js/auth.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
