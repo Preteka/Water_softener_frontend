@@ -16,6 +16,24 @@
   overflow: hidden;
 }
 
+.pricing-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/system_undersink_ro.jpg") center / cover no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .pricing-hero-section::before {
+  opacity: 0.08;
+}
+
+.pricing-hero-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
 .pricing-hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.95fr;
@@ -1249,3 +1267,39 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 480px) {
+  .pricing-hero-section {
+    padding: 3rem 0 2.25rem;
+  }
+
+  .pricing-hero-title {
+    font-size: 2.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .pricing-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pricing-hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .pricing-hero-actions .btn {
+    width: 100%;
+  }
+
+  .pricing-factors-section,
+  .pricing-plans-section,
+  .booking-wizard-section,
+  .pricing-compare-section,
+  .pricing-process-section,
+  .pricing-faq-section {
+    padding: 3.25rem 0;
+  }
+}
+

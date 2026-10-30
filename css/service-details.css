@@ -658,3 +658,39 @@
     padding: 1.75rem 1.25rem;
   }
 }
+
+@media (max-width: 480px) {
+  .service-hero-section {
+    padding: 3rem 0 2.25rem;
+  }
+
+  .service-hero-title {
+    font-size: 2.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .service-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .service-hero-actions .btn {
+    width: 100%;
+  }
+
+  .service-overview-section,
+  .service-features-section,
+  .service-process-section,
+  .service-pricing-section,
+  .service-faq-section,
+  .service-related-section {
+    padding: 3.25rem 0;
+  }
+}
+

@@ -58,9 +58,9 @@
 }
 
 [data-theme="dark"] .hero-journal-label {
-  background: rgba(11, 159, 227, 0.15);
-  border-color: rgba(56, 189, 248, 0.25);
-  color: var(--color-blue-bright, #0B9FE3);
+  background: var(--color-blue-light, rgba(0, 119, 200, 0.15));
+  border-color: var(--color-blue-border, rgba(0, 119, 200, 0.2));
+  color: var(--color-primary, #0077C8);
 }
 
 .blog-hero-title {
@@ -508,7 +508,7 @@
 
 [data-theme="dark"] .blog-cat-badge {
   background: rgba(6, 24, 43, 0.92);
-  color: var(--color-blue-bright, #0B9FE3);
+  color: var(--color-primary, #0077C8);
 }
 
 [dir="rtl"] .blog-cat-badge {
@@ -542,8 +542,8 @@
 }
 
 [data-theme="dark"] .featured-pill-tag {
-  background: rgba(11, 159, 227, 0.15);
-  color: var(--color-blue-bright, #0B9FE3);
+  background: var(--color-blue-light, rgba(0, 119, 200, 0.15));
+  color: var(--color-primary, #0077C8);
 }
 
 .featured-category-name {
@@ -916,8 +916,8 @@
 }
 
 [data-theme="dark"] .insight-icon-box {
-  background: rgba(11, 159, 227, 0.15);
-  color: var(--color-blue-bright, #0B9FE3);
+  background: var(--color-blue-light, rgba(0, 119, 200, 0.15));
+  color: var(--color-primary, #0077C8);
 }
 
 .insight-card:hover .insight-icon-box {
@@ -1111,3 +1111,27 @@
     padding: 2.5rem 1.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .blog-hero-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .blog-hero-title {
+    font-size: 2.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .blog-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .blog-featured-section,
+  .blog-grid-section,
+  .water-quality-insight-section,
+  .blog-newsletter-section {
+    padding: 3.25rem 0;
+  }
+}
+

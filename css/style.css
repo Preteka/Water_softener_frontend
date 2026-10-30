@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    AQUAPURE - HOME WATER SOFTENER & FILTRATION INSTALLER
    Design System: Water Blue Palette (Matched to Reference UI)
    ========================================================================== */
@@ -8,7 +8,7 @@
 :root {
   /* Water Blue Theme Palette */
   --color-primary: #0077C8;
-  --color-blue-deep: #005A9C;
+  --color-blue-deep: #0077C8;
   --color-blue-bright: #0B9FE3;
   --color-blue-ocean: #0077C8;
   --color-blue-dark: #083B66;
@@ -67,14 +67,14 @@
 
 /* --- Dark Theme Variables --- */
 [data-theme="dark"] {
-  --color-primary: #0B9FE3;
-  --color-blue-deep: #0B9FE3;
+  --color-primary: #0077C8;
+  --color-blue-deep: #0077C8;
   --color-blue-bright: #38BDF8;
-  --color-blue-ocean: #0284C7;
+  --color-blue-ocean: #0077C8;
   --color-blue-dark: #FFFFFF;
   --color-blue-navy: #E0F2FE;
-  --color-blue-light: rgba(11, 159, 227, 0.15);
-  --color-blue-verylight: rgba(11, 159, 227, 0.08);
+  --color-blue-light: rgba(0, 119, 200, 0.15);
+  --color-blue-verylight: rgba(0, 119, 200, 0.08);
   --color-blue-border: rgba(56, 189, 248, 0.2);
 
   --color-bg: #051829;
@@ -89,14 +89,14 @@
   --color-text-muted: #94B8D7;
   --color-text-light: #628CAE;
 
-  --indicator-active: #0B9FE3;
+  --indicator-active: #0077C8;
   --indicator-inactive: rgba(255, 255, 255, 0.3);
 
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
   --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.7);
-  --shadow-blue: 0 10px 30px rgba(11, 159, 227, 0.4);
+  --shadow-blue: 0 10px 30px rgba(0, 119, 200, 0.4);
 }
 
 /* ==========================================================================
@@ -202,7 +202,7 @@ button {
 }
 
 [data-theme="dark"] .section-tag {
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .section-title {
@@ -385,10 +385,6 @@ button {
   margin-top: 0.15rem;
 }
 
-[data-theme="dark"] .brand-sub {
-  color: var(--color-blue-bright);
-}
-
 /* Center Navigation Menu */
 .nav-menu {
   display: flex;
@@ -419,7 +415,7 @@ button {
 }
 
 [data-theme="dark"] .nav-link.active {
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .nav-link.active::after {
@@ -434,7 +430,7 @@ button {
 }
 
 [data-theme="dark"] .nav-link.active::after {
-  background: var(--color-blue-bright);
+  background: var(--color-primary);
 }
 
 /* Right Header Actions */
@@ -474,11 +470,11 @@ button {
 
 [data-theme="dark"] .header-action-btn:hover {
   background: #0E3050;
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .header-cta-pill {
-  background: #083B66;
+  background: var(--color-primary);
   color: var(--color-white);
   padding: 0.6rem 1.35rem;
   border-radius: var(--radius-pill);
@@ -503,7 +499,8 @@ button {
 }
 
 [data-theme="dark"] .header-cta-pill:hover {
-  background: var(--color-blue-bright);
+  background: var(--color-primary);
+  filter: brightness(1.08);
 }
 
 /* Hamburger */
@@ -778,7 +775,38 @@ button {
 }
 
 [data-theme="dark"] .indicator-bar.active {
-  background: var(--color-blue-bright);
+  background: var(--color-primary);
+  box-shadow: 0 0 14px rgba(0, 119, 200, 0.7);
+}
+
+.hero-wrapper .btn-primary,
+.hero-wrapper .btn-blue {
+  background: linear-gradient(135deg, #005A9C 0%, #0077C8 100%);
+  box-shadow: 0 10px 30px rgba(0, 119, 200, 0.35);
+}
+
+.hero-wrapper .btn-primary:hover,
+.hero-wrapper .btn-blue:hover {
+  background: linear-gradient(135deg, #0B9FE3 0%, #005A9C 100%);
+}
+
+[data-theme="dark"] .hero-wrapper .btn-primary,
+[data-theme="dark"] .hero-wrapper .btn-blue {
+  background: linear-gradient(135deg, #0B9FE3 0%, #0B9FE3 100%);
+  box-shadow: 0 10px 30px rgba(11, 159, 227, 0.4);
+}
+
+[data-theme="dark"] .hero-wrapper .btn-primary:hover,
+[data-theme="dark"] .hero-wrapper .btn-blue:hover {
+  background: linear-gradient(135deg, #38BDF8 0%, #0B9FE3 100%);
+}
+
+[data-theme="dark"] .hero-wrapper .slider-arrow-btn {
+  background: #0B9FE3;
+}
+
+[data-theme="dark"] .hero-wrapper .indicator-bar.active {
+  background: #38BDF8;
   box-shadow: 0 0 14px rgba(56, 189, 248, 0.9);
 }
 
@@ -992,7 +1020,7 @@ button {
 }
 
 [data-theme="dark"] .badge-stat-num {
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .badge-stat-label {
@@ -1573,8 +1601,8 @@ button {
 
 [data-theme="dark"] .step-badge {
   background: var(--color-card-bg);
-  color: var(--color-blue-bright);
-  box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.15);
+  color: var(--color-primary);
+  box-shadow: 0 0 0 6px rgba(0, 119, 200, 0.15);
 }
 
 .step-card:hover .step-badge {
@@ -1639,8 +1667,8 @@ button {
 }
 
 [data-theme="dark"] .benefit-icon-box {
-  background: rgba(11, 159, 227, 0.15);
-  color: var(--color-blue-bright);
+  background: var(--color-blue-light);
+  color: var(--color-primary);
 }
 
 .benefit-item-card:hover .benefit-icon-box {
@@ -2077,8 +2105,8 @@ button {
 }
 
 [data-theme="dark"] .system-spec-pill {
-  background: rgba(11, 159, 227, 0.15);
-  color: var(--color-blue-bright);
+  background: var(--color-blue-light);
+  color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -2146,7 +2174,7 @@ button {
 }
 
 [data-theme="dark"] .metric-status-live {
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .metric-rows-list {
@@ -2426,6 +2454,15 @@ button {
   flex-wrap: wrap;
 }
 
+.cta-buttons-wrap > .btn,
+.home2-hero-wrapper .hero-btn-group .btn,
+.about-split-cta-row .btn,
+.services-hero-actions .btn,
+.service-hero-actions .btn,
+.pricing-hero-actions .btn {
+  min-height: 52px;
+}
+
 @media (max-width: 1080px) {
   .main-cta-section {
     padding-block: 6rem 5.5rem;
@@ -2480,10 +2517,12 @@ button {
 }
 
 .footer-brand-title {
+  display: inline-block;
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--color-white);
+  text-decoration: none;
 }
 
 .footer-brand-title span {
@@ -2738,6 +2777,11 @@ button {
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
+.mobile-nav-drawer #mobileThemeToggleBtn,
+.mobile-nav-drawer #mobileDirToggleBtn {
+  display: none;
+}
+
 @media (max-width: 1080px) {
   .nav-menu {
     display: none;
@@ -2826,6 +2870,16 @@ button {
 }
 
 @media (max-width: 768px) {
+  .header-actions #themeToggleBtn,
+  .header-actions #dirToggleBtn {
+    display: none;
+  }
+
+  .mobile-nav-drawer #mobileThemeToggleBtn,
+  .mobile-nav-drawer #mobileDirToggleBtn {
+    display: inline-flex;
+  }
+
   .section {
     padding-block: 4.5rem;
   }
@@ -2993,6 +3047,207 @@ button {
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .section {
+    padding-block: 3.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .main-cta-section {
+    padding-block: 3.75rem 3.25rem;
+  }
+
+  .cta-desc {
+    margin-bottom: 1.75rem;
+  }
+
+  .cta-buttons-wrap {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .cta-buttons-wrap > .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .site-footer {
+    padding-top: 3.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-grid {
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* Home 1 Hero at mobile: preserve layout & media while eliminating excessive whitespace */
+  .hero-wrapper {
+    min-height: auto;
+    padding-block: 3.5rem 4.5rem;
+  }
+
+  .hero-main-title {
+    font-size: 2.15rem;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  .hero-supporting-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.55;
+  }
+
+  .hero-btn-group {
+    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .slider-arrow-btn {
+    width: 34px;
+    height: 34px;
+  }
+
+  .slider-arrow-prev { left: 0.25rem; }
+  .slider-arrow-next { right: 0.25rem; }
+
+  [dir="rtl"] .slider-arrow-prev { right: 0.25rem; left: auto; }
+  [dir="rtl"] .slider-arrow-next { left: 0.25rem; right: auto; }
+
+  /* Radial Stage mobile tightening */
+  .water-solutions-section {
+    padding-top: 3.5rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .radial-stage {
+    gap: 0.85rem;
+  }
+
+  .radial-center-drop {
+    width: 120px;
+    height: 150px;
+    margin: 0 auto 0.25rem;
+  }
+
+  .drop-mineral-orb {
+    width: 76px;
+    height: 76px;
+    margin-top: 20px;
+  }
+
+  .radial-node {
+    padding: 0.85rem 1rem;
+  }
+
+  /* Home 2 Hero mobile adjustments */
+  .home2-hero-wrapper {
+    padding-block: 3.5rem 3rem;
+  }
+
+  .hero-droplet-backdrop,
+  .about-story-droplet {
+    width: 290px;
+    height: 380px;
+  }
+
+  .hero-testing-panel {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.1rem 1.15rem;
+  }
+
+  /* About Hero Split mobile tightening */
+  .about-hero-split-wrapper {
+    padding-block: 3.25rem 0;
+  }
+
+  .about-split-title {
+    font-size: 1.85rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .about-split-lead {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-split-stats-row {
+    margin-block: 1.5rem 2rem;
+  }
+
+  /* Process Stacked Mobile */
+  .process-stacked-list {
+    margin-top: 1.75rem;
+    gap: 1.25rem;
+  }
+
+  .proc-card {
+    min-height: auto;
+  }
+
+  .proc-visual-area {
+    min-height: 170px;
+  }
+
+  /* Executive Standards Mobile */
+  .exec-std-composition {
+    gap: 1.75rem;
+    margin-top: 1.75rem;
+  }
+
+  .exec-col-left,
+  .exec-col-right {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-header .container {
+    padding-inline: 1rem;
+  }
+
+  .header-actions {
+    gap: 0.45rem;
+  }
+
+  .header-actions .header-action-btn {
+    padding-inline: 0.55rem;
+  }
+
+  .hero-inner-container {
+    padding-inline: 0.85rem;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .site-header .container {
+    padding-inline: 0.75rem;
+  }
+
+  .header-actions {
+    gap: 0.35rem;
+  }
+
+  .header-actions .header-action-btn {
+    padding-inline: 0.4rem;
+  }
+
+  .container {
+    padding-inline: 0.75rem;
+  }
+}
+
 
 /* ==========================================================================
    HOME PAGE 2 & ABOUT US - EXTENDED COMPONENT SYSTEM
@@ -4663,7 +4918,7 @@ button {
 }
 
 [data-theme="dark"] .journey-milestone-tag {
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .journey-title {
@@ -4832,7 +5087,7 @@ button {
 }
 
 [data-theme="dark"] .team-role {
-  color: var(--color-blue-bright);
+  color: var(--color-primary);
 }
 
 .team-bio {
@@ -5922,7 +6177,7 @@ button {
 
 [data-theme="dark"] .proc-num-badge {
   border-color: #0F172A;
-  background: linear-gradient(135deg, #0284C7 0%, #0369A1 60%, #075985 100%);
+  background: var(--color-primary);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.35);
 }
 
@@ -5942,7 +6197,7 @@ button {
 }
 
 [data-theme="dark"] .proc-float-head {
-  color: #38BDF8;
+  color: var(--color-primary);
 }
 
 [data-theme="dark"] .proc-float-row {
@@ -6326,7 +6581,7 @@ button {
 }
 
 [data-theme="dark"] .exec-icon-sq {
-  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  background: var(--color-primary);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 16px rgba(56, 189, 248, 0.25);
 }
 
@@ -6426,3 +6681,107 @@ button {
   }
 }
 
+/* Dark-mode CTA contrast */
+[data-theme="dark"] .header-cta-pill,
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-blue,
+[data-theme="dark"] .plan-btn-primary {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #0077C8 0%, #005A9C 100%);
+}
+
+[data-theme="dark"] .header-cta-pill:hover,
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-blue:hover,
+[data-theme="dark"] .plan-btn-primary:hover {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #005A9C 0%, #064675 100%);
+  filter: none;
+}
+
+[data-theme="dark"] .header-cta-pill:active,
+[data-theme="dark"] .plan-btn-primary:active {
+  color: #FFFFFF;
+  background: #064675;
+}
+
+[data-theme="dark"] .btn-secondary {
+  color: #E0F2FE;
+  background: #0A243D;
+  border-color: var(--color-blue-border);
+}
+
+[data-theme="dark"] .btn-secondary:hover,
+[data-theme="dark"] .btn-secondary:active {
+  color: #FFFFFF;
+  background: #005A9C;
+  border-color: #38BDF8;
+}
+
+[data-theme="dark"] .btn-white:hover,
+[data-theme="dark"] .btn-white:active {
+  color: #064675;
+  background: #EAF6FF;
+}
+
+[data-theme="dark"] .btn-white-outline:hover,
+[data-theme="dark"] .btn-white-outline:active {
+  color: #FFFFFF;
+  background: #005A9C;
+  border-color: #FFFFFF;
+}
+
+[data-theme="dark"] .btn-outline-blue,
+[data-theme="dark"] .btn-outline {
+  color: #E0F2FE;
+  background: #0A243D;
+  border-color: #38BDF8;
+}
+
+[data-theme="dark"] .btn-outline-blue:hover,
+[data-theme="dark"] .btn-outline-blue:active,
+[data-theme="dark"] .btn-outline:hover,
+[data-theme="dark"] .btn-outline:active {
+  color: #FFFFFF;
+  background: #005A9C;
+  border-color: #38BDF8;
+}
+
+[data-theme="dark"] .plan-btn-outline {
+  color: #E0F2FE;
+  background: #0A243D;
+  border-color: #38BDF8;
+}
+
+[data-theme="dark"] .plan-btn-outline:hover,
+[data-theme="dark"] .plan-btn-outline:active {
+  color: #FFFFFF;
+  background: #005A9C;
+  border-color: #38BDF8;
+}
+
+[data-theme="dark"] .btn:focus-visible,
+[data-theme="dark"] .header-cta-pill:focus-visible,
+[data-theme="dark"] .plan-card-btn:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 3px;
+}
+
+[data-theme="dark"] .water-solutions-section .radial-icon-ring {
+  color: #FFFFFF;
+  background: rgba(5, 24, 41, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 16px rgba(0, 119, 200, 0.55);
+}
+
+[data-theme="dark"] .water-solutions-section .radial-node:hover .radial-icon-ring {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #0077C8 0%, #005A9C 100%);
+  border-color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(0, 119, 200, 0.75);
+}
+
+[data-theme="dark"] .water-solutions-section .radial-node:hover .node-title {
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0, 15, 30, 0.9);
+}

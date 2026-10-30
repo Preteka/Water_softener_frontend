@@ -15,6 +15,24 @@
   border-bottom: 1px solid var(--color-card-border);
 }
 
+.contact-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/process_step2_test.jpg") center / cover no-repeat;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+[data-theme="dark"] .contact-hero-section::before {
+  opacity: 0.08;
+}
+
+.contact-hero-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
 .contact-hero-inner {
   text-align: center;
   max-width: 780px;
@@ -714,3 +732,26 @@
     padding-left: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-hero-section {
+    padding: 3rem 0 2rem;
+  }
+
+  .contact-hero-title {
+    font-size: 2.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .contact-hero-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-main-section,
+  .contact-channels-section,
+  .contact-faq-section {
+    padding: 3.25rem 0;
+  }
+}
+
